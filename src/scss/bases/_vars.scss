@@ -1,0 +1,65 @@
+@use './../mixins' as *;
+
+:root {
+  --font-family: Effra, Arial, Verdana, sans-serif;
+  --second-family: Rubik, Arial, Verdana, sans-serif;
+
+  --container-padding: 10rem;
+  --container-width: 124rem;
+  --header-height: 9rem;
+
+  --body-bg: #F8F9FE;
+
+  /* Светлые оттенки (White & Light Grays) */
+  --white: #fffffe;
+  --white-75: #fffffebf;
+  --ghost-white: #f8f9fe;
+  --snow-white: #f6f6f6;
+  --alabaster: #f6e6cc;
+
+  /* Серые оттенки (Grays) */
+  --light-gray: #cccccc;
+  --medium-gray: #636463;
+
+  /* Темные оттенки (Black & Darks) */
+  --black: #1a1919;
+  --black-50: #1a1919;
+  --dark-burgundy: #5e3a43;
+
+  /* Синие оттенки (Blues) */
+  --blue: #1d2d8c;
+  --blue-20: #1d2d8c33;
+  --deep-blue: #2e2b74;
+  --midnight-blue: #443793;
+  --steel-blue: #3b81b6;
+  --electric-blue: #3e3ef4;
+  --sky-blue: #01b4ff;
+
+  /* Бирюзовые и Зеленые оттенки (Teals & Greens) */
+  --cyan: #17e9e0;
+  --mint: #2bc995;
+  --emerald: #6bcb77;
+  --lime-green: #b4d335;
+
+  /* Желтые и Оранжевые оттенки (Yellows & Oranges) */
+  --amber-yellow: #fccd05;
+  --bright-orange: #f37021;
+  --tangerine: #e3672a;
+
+  /* Красные и Розовые оттенки (Reds & Pinks) */
+  --crimson-red: #da2a55;
+  --magenta-rose: #8e2b7d;
+
+  /* Фиолетовые оттенки (Purples) */
+  --deep-purple: #6a2c91;
+  --dark-magenta: #9f248f;
+  --plum-purple: #96248d;
+  --orchid-purple: #94268f;
+  --bright-purple: #a64ac9;
+
+  @include md {
+    --container-padding: 2rem;
+  }
+
+  @include sm {}
+}

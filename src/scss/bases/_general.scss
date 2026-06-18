@@ -1,0 +1,24 @@
+@use './../mixins' as *;
+
+.general {
+
+  &__head {}
+
+  &__title {
+
+    h1 {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 120%;
+      color: var(--blue);
+    }
+
+    br {
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+}

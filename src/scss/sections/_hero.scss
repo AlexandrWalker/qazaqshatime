@@ -1,0 +1,55 @@
+@use './../mixins' as *;
+
+.hero {
+
+  &__inner {
+    padding: 5.8rem 0 5.5rem;
+
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.6rem;
+    max-width: 60rem;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+
+    h1 {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 4.8rem;
+      line-height: 110%;
+      color: var(--blue);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__bg {
+    max-width: 87.4rem;
+    width: auto;
+    height: 49rem;
+
+    position: absolute;
+    top: -1.3rem;
+    right: -2.6rem;
+    z-index: 1;
+
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

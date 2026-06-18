@@ -1,0 +1,28 @@
+@use './../mixins' as *;
+
+.footer {
+  background-color: var(--deep-blue);
+
+  &__inner {
+    padding: 3.6rem 0;
+  }
+
+  &__nav {
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem 3rem;
+    }
+
+    a {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+  }
+}

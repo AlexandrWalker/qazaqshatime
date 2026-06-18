@@ -1,0 +1,113 @@
+@use './../mixins' as *;
+
+.services {
+  padding: 4rem 0;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &__slider {
+    width: calc(66.66666% + 2rem);
+    z-index: 1;
+    // margin-left: -1rem;
+    // padding: 0 1rem;
+    // overflow: hidden;
+  }
+
+  &__slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    &.swiper-slide-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    padding: 2.5rem 2.5rem 1.4rem 7rem;
+    border-radius: 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+
+    position: relative;
+
+    &--main {
+      width: 33.33334%;
+      height: auto;
+      padding: 2.5rem 2.5rem 1.4rem 15rem;
+      background-color: var(--blue);
+
+      color: var(--white);
+      z-index: 2;
+
+      .services__item-content {
+        gap: 1.6rem;
+      }
+
+      .services__item-title {
+        color: var(--white);
+      }
+
+      .services__item-text {
+        color: var(--white-75);
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &-title {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 120%;
+      color: var(--dark-magenta);
+    }
+
+    &-text {
+      font-size: 1.4rem;
+    }
+
+    &-icon {
+      width: auto;
+      height: 3rem;
+
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+
+      svg {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-img {
+      width: auto;
+      height: 15.6rem;
+
+      position: absolute;
+      top: -2.4rem;
+      left: 3rem;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+
+        transform: rotate(11.8deg);
+      }
+    }
+  }
+}

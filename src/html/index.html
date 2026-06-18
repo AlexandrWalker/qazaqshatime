@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru" class="main-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header.html')
+    <main class="main">
+
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <div class="hero__title">
+                <h1>
+                  Начнем путешествие
+                  в интересный путь изучения казахского языка
+                </h1>
+              </div>
+              <div class="hero__btns">
+                <a class="btn btn--green" data-fancybox href="#popup-begin">
+                  Начать
+                </a>
+                <button class="btn">
+                  уже есть аккаунт
+                </button>
+              </div>
+            </div>
+            <div class="hero__bg">
+              <img src="./../images/temp/hero-bg.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <div class="services__inner">
+
+            <div class="services__item services__item--main">
+              <div class="services__item-img">
+                <img src="./../images/temp/services-item-img.png" alt="">
+              </div>
+              <div class="services__item-content">
+                <div class="services__item-title">
+                  Узнай свой уровень казахского языка
+                </div>
+                <div class="services__item-text">
+                  Пройдите тест в любое удобное время
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper services__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide services__slide">
+                  <div class="services__item">
+                    <div class="services__item-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.745 9.5H20V7.5C20 4.7425 17.7575 2.5 15 2.5C14.6213 2.5 14.275 2.71375 14.105 3.0525L9.3825 12.5H4C2.8975 12.5 2 13.3975 2 14.5V25.5C2 26.6025 2.8975 27.5 4 27.5H25.2425C26.7437 27.4925 28.0175 26.365 28.205 24.8738L29.7038 12.8825C29.7213 12.75 29.73 12.615 29.73 12.48C29.7262 10.835 28.3863 9.5 26.745 9.5ZM3.99875 14.5H9V25.5H4V14.5H3.99875ZM27.7188 12.6263L26.2188 24.625C26.1562 25.1213 25.7313 25.4975 25.2362 25.5H11V13.7362L15.5887 4.5575C16.9625 4.8325 18 6.04625 18 7.5V10.5C18 11.0525 18.4475 11.5 19 11.5H26.7425C27.005 11.5 27.2525 11.6025 27.4387 11.7875C27.6262 11.9738 27.7288 12.2212 27.73 12.485C27.73 12.53 27.7275 12.5737 27.72 12.625L27.7188 12.6263Z"
+                          fill="url(#paint0_linear_6234_2344)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_6234_2344" x1="0.156998" y1="25.5144" x2="23.9235"
+                            y2="2.96178" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="services__item-content">
+                      <div class="services__item-title">
+                        Что мы предлагаем
+                      </div>
+                      <div class="services__item-text">
+                        Игровая платформа для быстрого изучения казахского языка — путь к увлекательному обучению.
+                        Выполняйте задания, получайте баллы, открывайте упражнения и развивайте разговорные навыки.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide services__slide">
+                  <div class="services__item">
+                    <div class="services__item-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.5 17C4.5 16.4477 4.94772 16 5.5 16H12.5C13.0523 16 13.5 16.4477 13.5 17C13.5 17.5523 13.0523 18 12.5 18H6.5V26C6.5 26.5523 6.05228 27 5.5 27C4.94772 27 4.5 26.5523 4.5 26V17Z"
+                          fill="url(#paint0_linear_6234_2174)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.5 26C2.5 25.4477 2.94772 25 3.5 25H28.5C29.0523 25 29.5 25.4477 29.5 26C29.5 26.5523 29.0523 27 28.5 27H3.5C2.94772 27 2.5 26.5523 2.5 26Z"
+                          fill="url(#paint1_linear_6234_2174)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M11.5 11C11.5 10.4477 11.9477 10 12.5 10H19.5C20.0523 10 20.5 10.4477 20.5 11C20.5 11.5523 20.0523 12 19.5 12H13.5V26C13.5 26.5523 13.0523 27 12.5 27C11.9477 27 11.5 26.5523 11.5 26V11Z"
+                          fill="url(#paint2_linear_6234_2174)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M18.5 5C18.5 4.44772 18.9477 4 19.5 4H26.5C27.0523 4 27.5 4.44772 27.5 5V26C27.5 26.5523 27.0523 27 26.5 27H19.5C18.9477 27 18.5 26.5523 18.5 26V5ZM20.5 6V25H25.5V6H20.5Z"
+                          fill="url(#paint3_linear_6234_2174)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                          <linearGradient id="paint1_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                          <linearGradient id="paint2_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                          <linearGradient id="paint3_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="services__item-content">
+                      <div class="services__item-title">
+                        Результативность обучения
+                      </div>
+                      <div class="services__item-text">
+                        Уже на первых уроках почувствуешь прогресс и погружение в обучение, а выдаваемые баллы и награды
+                        будут вас мотивировать во время всего процесса!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide services__slide">
+                  <div class="services__item">
+                    <div class="services__item-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.745 9.5H20V7.5C20 4.7425 17.7575 2.5 15 2.5C14.6213 2.5 14.275 2.71375 14.105 3.0525L9.3825 12.5H4C2.8975 12.5 2 13.3975 2 14.5V25.5C2 26.6025 2.8975 27.5 4 27.5H25.2425C26.7437 27.4925 28.0175 26.365 28.205 24.8738L29.7038 12.8825C29.7213 12.75 29.73 12.615 29.73 12.48C29.7262 10.835 28.3863 9.5 26.745 9.5ZM3.99875 14.5H9V25.5H4V14.5H3.99875ZM27.7188 12.6263L26.2188 24.625C26.1562 25.1213 25.7313 25.4975 25.2362 25.5H11V13.7362L15.5887 4.5575C16.9625 4.8325 18 6.04625 18 7.5V10.5C18 11.0525 18.4475 11.5 19 11.5H26.7425C27.005 11.5 27.2525 11.6025 27.4387 11.7875C27.6262 11.9738 27.7288 12.2212 27.73 12.485C27.73 12.53 27.7275 12.5737 27.72 12.625L27.7188 12.6263Z"
+                          fill="url(#paint0_linear_6234_2344)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_6234_2344" x1="0.156998" y1="25.5144" x2="23.9235"
+                            y2="2.96178" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="services__item-content">
+                      <div class="services__item-title">
+                        Что мы предлагаем
+                      </div>
+                      <div class="services__item-text">
+                        Игровая платформа для быстрого изучения казахского языка — путь к увлекательному обучению.
+                        Выполняйте задания, получайте баллы, открывайте упражнения и развивайте разговорные навыки.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide services__slide">
+                  <div class="services__item">
+                    <div class="services__item-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.5 17C4.5 16.4477 4.94772 16 5.5 16H12.5C13.0523 16 13.5 16.4477 13.5 17C13.5 17.5523 13.0523 18 12.5 18H6.5V26C6.5 26.5523 6.05228 27 5.5 27C4.94772 27 4.5 26.5523 4.5 26V17Z"
+                          fill="url(#paint0_linear_6234_2174)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.5 26C2.5 25.4477 2.94772 25 3.5 25H28.5C29.0523 25 29.5 25.4477 29.5 26C29.5 26.5523 29.0523 27 28.5 27H3.5C2.94772 27 2.5 26.5523 2.5 26Z"
+                          fill="url(#paint1_linear_6234_2174)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M11.5 11C11.5 10.4477 11.9477 10 12.5 10H19.5C20.0523 10 20.5 10.4477 20.5 11C20.5 11.5523 20.0523 12 19.5 12H13.5V26C13.5 26.5523 13.0523 27 12.5 27C11.9477 27 11.5 26.5523 11.5 26V11Z"
+                          fill="url(#paint2_linear_6234_2174)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M18.5 5C18.5 4.44772 18.9477 4 19.5 4H26.5C27.0523 4 27.5 4.44772 27.5 5V26C27.5 26.5523 27.0523 27 26.5 27H19.5C18.9477 27 18.5 26.5523 18.5 26V5ZM20.5 6V25H25.5V6H20.5Z"
+                          fill="url(#paint3_linear_6234_2174)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                          <linearGradient id="paint1_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                          <linearGradient id="paint2_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                          <linearGradient id="paint3_linear_6234_2174" x1="0.705515" y1="25.1733" x2="22.6005"
+                            y2="3.18435" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E36333" />
+                            <stop offset="0.583849" stop-color="#B73B62" />
+                            <stop offset="1" stop-color="#812775" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="services__item-content">
+                      <div class="services__item-title">
+                        Результативность обучения
+                      </div>
+                      <div class="services__item-text">
+                        Уже на первых уроках почувствуешь прогресс и погружение в обучение, а выдаваемые баллы и награды
+                        будут вас мотивировать во время всего процесса!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="swiper-button-next services-button-next"></div> -->
+              <!-- <div class="swiper-button-prev services-button-prev"></div> -->
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')
