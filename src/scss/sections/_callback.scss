@@ -1,0 +1,59 @@
+@use './../mixins' as *;
+
+.callback {
+  margin-bottom: 4rem;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    padding: 4rem 4rem 8.6rem 4rem;
+    border-radius: 1.5rem;
+    background: var(--white);
+    box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+
+    position: relative;
+
+    @include md {
+      padding: 4rem;
+    }
+
+    @include sm {
+      gap: 2rem;
+      padding: 2rem;
+    }
+  }
+
+  &__body {
+    max-width: 75.6rem;
+
+    .btn {
+      --btn-padding-x: 12rem;
+
+      @include md {
+        --btn-padding-x: 2rem;
+
+        width: 100%;
+      }
+    }
+  }
+
+  &__cover {
+    height: 40.4rem;
+
+    position: absolute;
+    top: 9rem;
+    right: 5.7rem;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

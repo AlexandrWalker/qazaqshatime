@@ -6,49 +6,18 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
 
-    @include sm {
-      gap: 0.8rem;
-    }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 
   &-body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-  }
-
-  &-title {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 125%;
-
-    @include sm {
-      font-size: 1.4rem;
-    }
-  }
-
-  &-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  &-block {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  &-wrap {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3rem;
-
-    @include sm {
-      gap: 0.8rem;
-    }
   }
 
   &-col {
@@ -60,53 +29,15 @@
 
       @include sm {
         grid-template-columns: 1fr;
-        gap: 0.8rem;
       }
 
-      &.form-items {
+      .form-group:nth-child(3) {
 
-        @include sm {
-          grid-template-columns: repeat(2, 1fr);
+        @include dosm {
+          grid-column: 1/3;
         }
       }
     }
-
-    &-9 {
-      display: grid;
-      grid-template-columns: repeat(9, 1fr);
-      gap: 2rem;
-
-      @include sm {
-        grid-template-columns: 1fr;
-      }
-
-      .form-items:nth-child(1) {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-
-        @include dosm {
-          grid-column: 1/7;
-        }
-
-        @include sm {
-          gap: 1rem;
-        }
-      }
-
-      .form-items:nth-child(2) {
-
-        @include dosm {
-          grid-column: 7/10;
-        }
-      }
-    }
-  }
-
-  &-item {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
   }
 
   &-group {
@@ -115,16 +46,16 @@
 
   &-input {
     width: 100%;
-    height: 5.6rem;
+    height: 5.5rem;
     background-color: var(--white);
-    border: 0.1rem solid var(--black-10);
-    border-radius: 5.2rem;
-    padding: 0 2rem 0 5.4rem;
+    border: 0.2rem solid #e4e8ef;
+    border-radius: 1rem;
+    padding: 0 2rem;
     transition: all 0.3s ease;
 
     font-weight: 400;
     font-size: 1.4rem;
-    line-height: 143%;
+    line-height: 140%;
     color: var(--black);
 
     &.filled,
@@ -157,79 +88,29 @@
     }
   }
 
-  &-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.4rem;
-    height: 2.4rem;
-
-    color: var(--accent);
-
-    position: absolute;
-    top: 50%;
-    left: 2rem;
-    z-index: 1;
-    transform: translateY(-50%);
-
-    i {
-      --font-size: 2.4rem;
-
-    }
-  }
-
-  &-total {
-
-    &-weight {
-
-      &::before {
-        content: "кг";
-      }
-    }
-
-    &-volume {
-
-      &::before {
-        content: "м\00B3";
-      }
-    }
-
-    &::before {
-      font-weight: 700;
-      font-size: 1.4rem;
-      line-height: 143%;
-      color: var(--accent);
-
-      position: absolute;
-      top: 50%;
-      right: 2rem;
-      z-index: 1;
-      transform: translateY(-50%);
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 0.1rem;
-      height: 3.2rem;
-      background-color: var(--gray-2);
-
-      position: absolute;
-      top: 50%;
-      right: 4.3rem;
-      z-index: 1;
-      transform: translateY(-50%);
-    }
-
-    .form-input {
-      padding: 0 5rem 0 2rem;
-    }
-  }
-
   &-label {
-    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    font-weight: 400;
     font-size: 1.6rem;
-    line-height: 125%;
+    line-height: 150%;
+  }
+
+  &-textarea {
+    width: 100%;
+    height: 11rem;
+    background-color: var(--white);
+    border: 0.2rem solid #e4e8ef;
+    border-radius: 1rem;
+    padding: 0 2rem;
+    transition: all 0.3s ease;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 140%;
+    color: var(--black);
   }
 
   &-radio {
@@ -301,22 +182,6 @@
     }
   }
 
-  &-foot {
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-
-    @include sm {
-      gap: 1rem;
-    }
-  }
-
-  &-privacy {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   &-checkbox {
 
     &-label {
@@ -378,119 +243,6 @@
       font-size: 1.2rem;
       line-height: 120%;
       color: var(--black-50);
-    }
-  }
-
-  &-captcha {
-    width: auto;
-    height: 4.6rem;
-
-    img {
-      width: auto;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-
-  &-btn {
-    --btn-width: 100%;
-    --btn-background: radial-gradient(45.69% 45.69% at 54.31% 100%, rgba(245, 71, 98, 0.64) 20%, rgba(220, 35, 64, 0.64) 100%), #DC2340;
-
-    box-shadow: 0px 13px 50.3px rgba(220, 35, 64, 0.35);
-  }
-
-  &-text {
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 120%;
-    letter-spacing: -0.04em;
-    color: var(--white-50);
-
-    @include sm {
-      font-size: 1.2rem;
-    }
-
-    a {
-      text-decoration: underline;
-
-      &:hover {
-        color: var(--white);
-      }
-    }
-  }
-
-  &-file {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-
-    &-input {
-      visibility: hidden;
-      position: absolute;
-      top: -99999px;
-      left: -999999px;
-    }
-
-    &-label {
-      display: block;
-      width: fit-content;
-    }
-
-    &-wrap {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-
-      color: var(--red);
-
-      @include sm {
-        gap: 0.5rem;
-      }
-
-      i {
-        --font-size: 2.4rem;
-
-        @include sm {
-          --font-size: 1.6rem;
-        }
-      }
-
-      span {
-        font-weight: 400;
-        font-size: 2rem;
-        line-height: 120%;
-        letter-spacing: -0.04em;
-
-        @include sm {
-          font-size: 1.2rem;
-        }
-      }
-    }
-
-    &-clear {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.5rem;
-
-      font-weight: 400;
-      font-size: 2rem;
-      line-height: 120%;
-      letter-spacing: -0.04em;
-      color: var(--red);
-
-      @include sm {
-        font-size: 1.2rem;
-      }
-
-      i {
-        --font-size: 1.6rem;
-
-        @include sm {
-          --font-size: 1.2rem;
-        }
-      }
     }
   }
 }

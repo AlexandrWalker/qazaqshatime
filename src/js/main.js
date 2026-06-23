@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
       },
       600: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       769: {
         slidesPerView: 2,

@@ -27,11 +27,8 @@
     line-height: 0.5rem;
     font-size: 0.5rem;
 
+    bottom: -2rem !important;
     z-index: 1;
-
-    @include dosm {
-      bottom: -2rem !important;
-    }
 
     &-bullet {
       display: flex;

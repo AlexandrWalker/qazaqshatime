@@ -11,12 +11,29 @@
     box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
     border-radius: 1.5rem;
     padding: 4rem;
+
+    @include md {
+      gap: 3rem;
+    }
+
+    @include sm {
+      gap: 3rem;
+      padding: 2rem;
+    }
   }
 
   &__body {
     display: flex;
     flex-direction: column;
     gap: 6rem;
+
+    @include md {
+      gap: 3rem;
+    }
+
+    @include sm {
+      gap: 3rem;
+    }
   }
 
   &__block {
@@ -26,8 +43,11 @@
     gap: 6.6rem;
 
     @include md {
-      flex-direction: column;
       gap: 3rem;
+    }
+
+    @include sm{
+      flex-direction: column;
     }
 
     &:nth-child(2) {
@@ -35,6 +55,10 @@
       gap: 3.5rem;
 
       @include md {
+        align-items: center;
+      }
+
+      @include sm{
         gap: 3rem;
       }
 
@@ -51,6 +75,10 @@
     flex-shrink: 0;
 
     @include md {
+      width: 22rem;
+    }
+
+    @include sm{
       width: 100%;
     }
 
@@ -64,6 +92,10 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include sm {
+      gap: 1.5rem;
+    }
   }
 
   &__title {
@@ -71,11 +103,19 @@
     font-size: 3.2rem;
     line-height: 120%;
     color: var(--dark-magenta);
+
+    @include sm {
+      font-size: 2rem;
+    }
   }
 
   &__text {
     font-size: 2rem;
     line-height: 150%;
     color: var(--medium-gray);
+
+    @include sm {
+      font-size: 1.4rem;
+    }
   }
 }

@@ -9,6 +9,23 @@
   overflow-x: hidden;
   overflow-y: auto;
 
+  @include sm {
+    padding: 7.6rem 2rem;
+  }
+
+  &__cover {
+    width: auto;
+    height: 16rem;
+
+    margin-bottom: 6rem;
+
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
   &__wrap {
     display: flex;
     justify-content: center;
@@ -22,12 +39,27 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    width: 100%;
+
+    @include sm {
+      gap: 3rem;
+    }
+
+    #popup-success & {
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
   }
 
   &__head {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    #popup-success & {
+      margin-bottom: 4rem;
+    }
   }
 
   &__title {
@@ -37,6 +69,10 @@
     line-height: 120%;
     text-align: center;
     color: var(--blue);
+
+    @include sm {
+      font-size: 3.2rem;
+    }
   }
 
   &__body {
@@ -48,7 +84,13 @@
   &__items {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 2rem;
+
+    @include sm {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
   }
 
   &__item {
@@ -63,9 +105,13 @@
     text-align: center;
 
     &-img {
-      width: 100%;
+      width: auto;
       height: 20.4rem;
       margin-bottom: 2rem;
+
+      @include sm {
+        height: 18rem;
+      }
 
       img {
         width: auto;
@@ -88,5 +134,12 @@
     &-text {
       font-size: 1.4rem;
     }
+  }
+}
+
+#popup-success {
+
+  .btn {
+    --btn-padding-x: 11rem;
   }
 }

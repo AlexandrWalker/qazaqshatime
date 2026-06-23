@@ -6,6 +6,10 @@
     padding: 5.8rem 0 5.5rem;
 
     position: relative;
+
+    @include sm {
+      padding: 0;
+    }
   }
 
   &__content {
@@ -14,11 +18,19 @@
     gap: 3.6rem;
     max-width: 60rem;
 
-    position: relative;
-    z-index: 2;
+    @include md {
+      gap: 32rem;
+    }
+
+    @include sm {
+      gap: 2rem;
+      max-width: unset;
+    }
   }
 
   &__title {
+    position: relative;
+    z-index: 2;
 
     h1 {
       font-family: var(--second-family);
@@ -26,6 +38,11 @@
       font-size: 4.8rem;
       line-height: 110%;
       color: var(--blue);
+
+      @include sm {
+        font-size: 3.2rem;
+        text-align: center;
+      }
     }
   }
 
@@ -34,6 +51,21 @@
     flex-direction: row;
     align-items: center;
     gap: 2rem;
+
+    position: relative;
+    z-index: 2;
+
+    @include sm {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .btn {
+
+      @include sm {
+        width: 100%;
+      }
+    }
   }
 
   &__bg {
@@ -46,10 +78,33 @@
     right: -2.6rem;
     z-index: 1;
 
+    @include md {
+      width: 100%;
+
+      top: 57%;
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include sm {
+      width: calc(100% + (var(--container-padding) * 2));
+      margin-left: calc(var(--container-padding) * -1);
+      height: auto;
+
+      position: static;
+      transform: unset;
+    }
+
     img {
       width: auto;
       height: 100%;
       object-fit: contain;
+
+      @include sm {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
