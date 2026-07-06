@@ -1,0 +1,135 @@
+@use './../mixins' as *;
+
+.achievs {
+  padding: 3.8rem 3rem 3rem 3rem;
+  border-radius: 2rem;
+  background-color: var(--white);
+
+  @include sm {
+    padding: 2rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    @include sm {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 120%;
+    color: var(--dark-magenta);
+    text-align: center;
+
+    @include sm {
+      margin-bottom: 0;
+    }
+  }
+
+  &__cover {
+    width: 100%;
+
+    @include sm {
+      width: 6.8rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__bar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    color: var(--medium-gray);
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &-head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 110%;
+    }
+
+    &-count {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.6rem;
+
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 110%;
+      text-align: right;
+
+      i {
+        --font-size: 1.3rem;
+      }
+    }
+
+    &-body {
+      height: 0.8rem;
+
+      progress {
+        background: var(--light-gray-20);
+        color: var(--lime-green);
+
+        display: block;
+        width: 100%;
+        height: 0.8rem;
+        appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        border-radius: 10rem;
+        overflow: hidden;
+        cursor: default;
+
+        &::-webkit-progress-bar {
+          background: var(--light-gray-20);
+          border-radius: 10rem;
+        }
+
+        &::-webkit-progress-value {
+          background: var(--lime-green);
+          border-radius: 10rem;
+          transition: width 0.4s ease;
+        }
+
+        &[value="0"]::-webkit-progress-value {
+          background: var(--light-gray-20);
+        }
+      }
+    }
+  }
+
+  &__btn.btn {
+    --btn-width: 100%;
+  }
+}

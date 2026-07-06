@@ -12,6 +12,8 @@
 
   /* Светлые оттенки (White & Light Grays) */
   --white: #fffffe;
+  --white-20: rgba(255, 255, 254, 0.2);
+  --white-50: rgba(255, 255, 254, 0.5);
   --white-75: #fffffebf;
   --ghost-white: #f8f9fe;
   --snow-white: #f6f6f6;
@@ -19,7 +21,11 @@
 
   /* Серые оттенки (Grays) */
   --light-gray: #cccccc;
+  --light-gray-20: rgba(204, 204, 204, 0.2);
+  --light-gray-30: rgba(204, 204, 204, 0.3);
   --medium-gray: #636463;
+  --medium-gray-10: rgba(99, 100, 99, 0.1);
+  --medium-gray-20: rgba(99, 100, 99, 0.2);
 
   /* Темные оттенки (Black & Darks) */
   --black: #1a1919;
@@ -28,9 +34,11 @@
 
   /* Синие оттенки (Blues) */
   --blue: #1d2d8c;
+  --blue-10: rgba(29, 45, 140, 0.1);
   --blue-20: #1d2d8c33;
   --deep-blue: #2e2b74;
   --midnight-blue: #443793;
+  --midnight-blue-30: rgba(68, 55, 147, 0.3);
   --steel-blue: #3b81b6;
   --electric-blue: #3e3ef4;
   --sky-blue: #01b4ff;
@@ -53,6 +61,7 @@
   /* Фиолетовые оттенки (Purples) */
   --deep-purple: #6a2c91;
   --dark-magenta: #9f248f;
+  --dark-magenta-10: rgba(159, 36, 143, 0.1);
   --plum-purple: #96248d;
   --orchid-purple: #94268f;
   --bright-purple: #a64ac9;

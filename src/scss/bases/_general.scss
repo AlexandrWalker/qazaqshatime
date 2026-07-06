@@ -1,8 +1,79 @@
 @use './../mixins' as *;
 
 .general {
+  margin-bottom: 12rem;
 
-  &__head {}
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem 2rem;
+
+    @include dosm {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  &__lesson {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 3.2rem 1rem 1.4rem;
+    border-radius: 2rem;
+    background-color: var(--lime-green);
+
+    color: var(--white);
+
+    @include dosm {
+      grid-column: 7/9;
+    }
+
+    &-head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    &-img {
+      width: auto;
+      height: 7.8rem;
+      flex-shrink: 0;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-text {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 120%;
+    }
+
+    &-icon {
+      height: fit-content;
+
+      i {
+        --font-size: 3.2rem;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.4rem;
+
+    @include dosm {
+      grid-column: 1/7;
+    }
+  }
 
   &__title {
 
@@ -24,5 +95,113 @@
         display: none;
       }
     }
+  }
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: var(--deep-blue);
+    border-radius: 2rem 2rem 0 0;
+
+    @include dosm {
+      grid-column: 1/7;
+    }
+
+    @include sm {
+      width: 100vw;
+      padding: 0 0.8rem 0 0.8rem;
+
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.2rem 0 1.8rem 0;
+    border-bottom: 0.4rem solid transparent;
+
+    color: var(--white);
+
+    @include sm {
+      gap: 0.4rem;
+    }
+
+    &--active {
+      border-color: var(--lime-green);
+
+      color: var(--lime-green);
+    }
+
+    i {
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      @include sm {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.6rem;
+  }
+
+  &__back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 110%;
+    color: var(--blue);
+
+    i {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 110%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--blue);
+
+    i {
+      --font-size: 3.2rem;
+    }
+
+
   }
 }

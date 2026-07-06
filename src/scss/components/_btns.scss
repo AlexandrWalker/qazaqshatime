@@ -57,4 +57,10 @@
     --btn-background: var(--lime-green);
     --btn-border-color: var(--lime-green);
   }
+
+  &--white {
+    --btn-background: var(--white);
+    --btn-border-color: var(--white);
+    --btn-color: var(--deep-blue);
+  }
 }

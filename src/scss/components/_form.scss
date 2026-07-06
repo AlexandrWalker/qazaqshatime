@@ -20,6 +20,17 @@
     gap: 2rem;
   }
 
+  &-suptitle {
+
+    p {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 150%;
+      text-align: center;
+      color: var(--medium-gray);
+    }
+  }
+
   &-col {
 
     &-2 {
@@ -111,6 +122,17 @@
     font-size: 1.4rem;
     line-height: 140%;
     color: var(--black);
+  }
+
+  &-text {
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 150%;
+      text-align: center;
+      color: var(--medium-gray);
+    }
   }
 
   &-radio {
@@ -243,6 +265,25 @@
       font-size: 1.2rem;
       line-height: 120%;
       color: var(--black-50);
+    }
+  }
+
+  &-text {
+
+    a {
+      color: var(--dark-magenta);
+    }
+  }
+
+  &-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 36.8rem;
+    width: 100%;
+
+    .btn {
+      max-width: 36.8rem;
     }
   }
 }

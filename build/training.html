@@ -59,55 +59,249 @@
 </header>
     <main class="main">
 
-      <section class="callback">
+      <section class="general">
         <div class="container">
-          <div class="callback__inner">
+          <div class="general__inner">
 
-            <div class="general__head">
-              <div class="general__title">
-                <h1>
-                  Обратная связь
-                </h1>
+            <div class="general__tabs">
+              <a class="general__tab" href="/qazaqshatime/main.html">
+                <i class="icon-"></i>
+                <p>
+                  Главная
+                </p>
+              </a>
+              <a class="general__tab general__tab--active" href="/qazaqshatime/training.html">
+                <i class="icon-"></i>
+                <p>
+                  Тренажер
+                </p>
+              </a>
+              <a class="general__tab" href="/qazaqshatime/rating.html">
+                <i class="icon-"></i>
+                <p>
+                  Рейтинг
+                </p>
+              </a>
+              <a class="general__tab" href="/qazaqshatime/">
+                <i class="icon-"></i>
+                <p>
+                  Словарь
+                </p>
+              </a>
+              <a class="general__tab" href="/qazaqshatime/">
+                <i class="icon-"></i>
+                <p>
+                  ЕНТ
+                </p>
+              </a>
+            </div>
+
+            <div class="general__lesson">
+              <div class="general__lesson-head">
+                <div class="general__lesson-img">
+                  <img src="./images/temp/pencil.png" alt="">
+                </div>
+                <div class="general__lesson-text">
+                  Мой урок
+                </div>
+              </div>
+              <div class="general__lesson-icon">
+                <i class="icon-"></i>
               </div>
             </div>
 
-            <div class="callback__body">
+            <div class="general__content">
 
-              <form class="form" action="">
-                <div class="form-content">
-                  <div class="form-body form-col-2">
-                    <div class="form-group">
-                      <label class="form-label">
-                        Имя
-                        <input class="form-input" name="name" type="text">
-                      </label>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">
-                        Email
-                        <input class="form-input" name="email" type="email">
-                      </label>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">
-                        Сообщение
-                        <textarea class="form-textarea" name="message" rows="5"></textarea>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-foot">
-                    <button class="btn btn--green" data-fancybox href="#popup-success">
-                      Отправить
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <div class="general__title">
+                <h1>
+                  Тренажер
+                </h1>
+              </div>
 
             </div>
 
-            <div class="callback__cover">
-              <img src="./images/temp/callback-cover.png" alt="">
+            <div class="sidebar">
+  <div class="sidebar__inner">
+
+    <div class="progress">
+      <div class="progress__head">
+        <div class="progress__title">
+          Ваш прогресс
+        </div>
+        <div class="progress__cover">
+          <img src="./images/temp/sidebar-progress-img.png" alt="">
+        </div>
+        <div class="progress__text">
+          Кубки сегодня: <span>8/16</span>
+        </div>
+      </div>
+      <div class="progress__bar">
+        <div class="progress__bar-item">
+          <div class="progress__bar-head">
+            <div class="progress__bar-text">
+              Змейка
             </div>
+            <div class="progress__bar-count">
+              <span>5/7</span>
+              <i class="icon-galochka"></i>
+            </div>
+          </div>
+          <div class="progress__bar-body">
+            <progress value="5" max="7"></progress>
+          </div>
+        </div>
+        <div class="progress__bar-item progress__bar-item--full">
+          <div class="progress__bar-head">
+            <div class="progress__bar-text">
+              Тренажеры
+            </div>
+            <div class="progress__bar-count">
+              <span>3/3</span>
+              <i class="icon-galochka"></i>
+            </div>
+          </div>
+          <div class="progress__bar-body">
+            <progress value="3" max="3"></progress>
+          </div>
+        </div>
+        <div class="progress__bar-item">
+          <div class="progress__bar-head">
+            <div class="progress__bar-text">
+              Сценки
+            </div>
+            <div class="progress__bar-count">
+              <span>3/7</span>
+              <i class="icon-galochka"></i>
+            </div>
+          </div>
+          <div class="progress__bar-body">
+            <progress value="3" max="7"></progress>
+          </div>
+        </div>
+      </div>
+      <div class="progress__active">
+        <div class="progress__active-head">
+          <div class="progress__active-title">
+            Недельная активность
+          </div>
+        </div>
+        <div class="progress__active-body">
+
+          <div class="progress__active-grid">
+
+            <!-- Пн -->
+            <div class="progress__active-col">
+              <div class="progress__active-wrap">
+                <progress max="10" value="4"></progress>
+              </div>
+              <span class="progress__active-label">пн</span>
+            </div>
+
+            <!-- Вт -->
+            <div class="progress__active-col">
+              <div class="progress__active-wrap">
+                <progress max="10" value="8"></progress>
+              </div>
+              <span class="progress__active-label">вт</span>
+            </div>
+
+            <!-- Ср -->
+            <div class="progress__active-col">
+              <div class="progress__active-wrap">
+                <progress max="10" value="4"></progress>
+              </div>
+              <span class="progress__active-label">ср</span>
+            </div>
+
+            <!-- Чт -->
+            <div class="progress__active-col">
+              <div class="progress__active-wrap">
+                <progress max="10" value="7"></progress>
+              </div>
+              <span class="progress__active-label">чт</span>
+            </div>
+
+            <!-- Пт -->
+            <div class="progress__active-col">
+              <div class="progress__active-wrap">
+                <progress max="10" value="10"></progress>
+              </div>
+              <span class="progress__active-label">пт</span>
+            </div>
+
+            <!-- Сб -->
+            <div class="progress__active-col">
+              <div class="progress__active-wrap empty">
+                <progress max="10" value="0"></progress>
+              </div>
+              <span class="progress__active-label">сб</span>
+            </div>
+
+            <!-- Вс -->
+            <div class="progress__active-col">
+              <div class="progress__active-wrap empty">
+                <progress max="10" value="0"></progress>
+              </div>
+              <span class="progress__active-label">вс</span>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="progress__active-foot">
+          <i class="icon-"></i>
+          5 дней подряд
+        </div>
+      </div>
+    </div>
+
+    <div class="achievs">
+      <div class="achievs__head">
+        <div class="achievs__title">
+          Достижения
+        </div>
+        <div class="achievs__cover">
+          <img src="./images/temp/achievs-cover.png" alt="">
+        </div>
+      </div>
+      <div class="achievs__bar">
+        <div class="achievs__bar-item">
+          <div class="achievs__bar-head">
+            <div class="achievs__bar-text">
+              Первый рубеж
+            </div>
+            <div class="achievs__bar-count">
+              <span>4/15</span>
+              <i class="icon-galochka"></i>
+            </div>
+          </div>
+          <div class="achievs__bar-body">
+            <progress value="4" max="15"></progress>
+          </div>
+        </div>
+      </div>
+      <a class="achievs__btn btn" href="/">
+        Смотреть все
+      </a>
+    </div>
+
+    <div class="repl">
+      <div class="repl__cover">
+        <img src="./images/temp/repl-cover.png" alt="">
+      </div>
+      <div class="repl__title">
+        Хотите продолжить?
+      </div>
+      <div class="repl__text">
+        Пополните баланс, чтобы продолжить занятия
+      </div>
+      <div class="repl__btn btn btn--green">
+        Пополнить
+      </div>
+    </div>
+
+  </div>
+</div>
 
           </div>
         </div>

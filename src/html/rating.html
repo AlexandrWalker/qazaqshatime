@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" class="main-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            <div class="general__tabs">
+              <a class="general__tab" href="/qazaqshatime/main.html">
+                <i class="icon-"></i>
+                <p>
+                  Главная
+                </p>
+              </a>
+              <a class="general__tab" href="/qazaqshatime/training.html">
+                <i class="icon-"></i>
+                <p>
+                  Тренажер
+                </p>
+              </a>
+              <a class="general__tab general__tab--active" href="/qazaqshatime/rating.html">
+                <i class="icon-"></i>
+                <p>
+                  Рейтинг
+                </p>
+              </a>
+              <a class="general__tab" href="/qazaqshatime/">
+                <i class="icon-"></i>
+                <p>
+                  Словарь
+                </p>
+              </a>
+              <a class="general__tab" href="/qazaqshatime/">
+                <i class="icon-"></i>
+                <p>
+                  ЕНТ
+                </p>
+              </a>
+            </div>
+
+            <div class="general__lesson">
+              <div class="general__lesson-head">
+                <div class="general__lesson-img">
+                  <img src="./../images/temp/pencil.png" alt="">
+                </div>
+                <div class="general__lesson-text">
+                  Мой урок
+                </div>
+              </div>
+              <div class="general__lesson-icon">
+                <i class="icon-"></i>
+              </div>
+            </div>
+
+            <div class="general__content">
+
+              <div class="general__title">
+                <h1>
+                  Рейтинг пользователей
+                </h1>
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')
