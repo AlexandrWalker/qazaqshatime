@@ -1,0 +1,242 @@
+@use './../mixins' as *;
+
+.training {
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem 1.5rem 2rem 2rem;
+    box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+    overflow: clip;
+
+    &-head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem 2rem;
+      padding: 0.5rem 3rem 0.5rem 0.5rem;
+      background-color: var(--white);
+      box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+      border-radius: 1.5rem 1.5rem 0px 0px;
+
+      @include sm {
+        flex-wrap: wrap;
+        padding: 1rem;
+      }
+    }
+
+    &-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 9rem;
+      height: 9rem;
+      background-color: var(--ghost-white);
+      border-radius: 1rem;
+      overflow: hidden;
+      flex-shrink: 0;
+
+      img {
+        max-width: 100%;
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      width: 100%;
+
+      @include sm {
+        width: calc(100% - 2rem - 9rem);
+      }
+    }
+
+    &-title {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 120%;
+      color: var(--blue);
+
+      @include sm {
+        font-size: 2.2rem;
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 150%;
+      color: var(--medium-gray);
+    }
+
+    &-progress {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.9rem;
+
+      @include sm {
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      progress {
+        background: var(--medium-gray-20);
+        color: var(--dark-magenta);
+
+        display: block;
+        width: 6.9rem;
+        height: 0.8rem;
+        border-radius: 10rem;
+        appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        overflow: hidden;
+        cursor: default;
+
+        &::-webkit-progress-bar {
+          background: var(--medium-gray-20);
+          border-radius: 10rem;
+        }
+
+        &::-webkit-progress-value {
+          background: var(--dark-magenta);
+          border-radius: 10rem;
+          transition: width 0.4s ease;
+        }
+
+        &[value="0"]::-webkit-progress-value {
+          background: var(--dark-magenta);
+        }
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        color: var(--medium-gray);
+        white-space: nowrap;
+      }
+    }
+
+    &-body {
+      display: grid;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+      padding: 2rem;
+      border-radius: 0px 0px 2rem 2rem;
+
+      .training__item--hide & {
+        grid-template-rows: 0fr;
+        padding: 0;
+      }
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem 1.5rem;
+      overflow: hidden;
+
+      @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    &-block {
+      --training-bg-color: var(--white);
+      --training-border-color: var(--medium-gray);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: var(--training-bg-color);
+      border: 0.2rem solid var(--training-border-color);
+      box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+      border-radius: 2rem;
+      padding: 1rem 1rem 2rem 1rem;
+
+      position: relative;
+
+      &--success {
+        --training-bg-color: var(--lime-green-20);
+        --training-border-color: var(--lime-green);
+      }
+
+      &--fail {
+        --training-bg-color: var(--bright-orange-20);
+        --training-border-color: var(--bright-orange);
+      }
+
+      &--lock {
+        pointer-events: none;
+        opacity: 0.4;
+      }
+    }
+
+    &-cover {
+      height: 9rem;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1;
+    }
+
+    &-all {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--lime-green);
+      border-radius: 2rem;
+      padding: 3rem 4rem 3rem 4.6rem;
+
+      grid-column: span 2;
+
+      .training__item-text {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 120%;
+        color: var(--white);
+      }
+
+      .training__item-icon {
+        --font-size: 3.2rem;
+      }
+    }
+  }
+}

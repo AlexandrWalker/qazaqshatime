@@ -1,0 +1,152 @@
+@use './../mixins' as *;
+
+.rating {
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 1rem 4.5rem 1rem 2.9rem;
+    background-color: var(--white);
+    border: 0.2rem solid transparent;
+    box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+    border-radius: 1.5rem;
+
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+
+    @include sm {
+      flex-wrap: wrap;
+      gap: 1rem 0;
+    }
+
+    &--you {
+      background-color: var(--blue);
+
+      color: var(--white);
+    }
+
+    &:nth-child(1) {
+      border-color: var(--amber-yellow);
+
+      .rating__item-count {
+        color: var(--amber-yellow);
+      }
+    }
+
+    &:nth-child(2) {
+      border-color: var(--light-gray);
+
+      .rating__item-count {
+        color: var(--light-gray);
+      }
+    }
+
+    &:nth-child(3) {
+      border-color: var(--tangerine);
+
+      .rating__item-count {
+        color: var(--tangerine);
+      }
+    }
+
+    &-count {
+      display: block;
+      width: 4.1rem;
+      flex-shrink: 0;
+
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 120%;
+    }
+
+    &-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.8rem;
+      height: 3.8rem;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 1rem;
+      flex-shrink: 0;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-name {
+      width: 100%;
+      margin-right: 3.9rem;
+
+      @include sm {
+        width: auto;
+      }
+
+      .rating__item--you & {
+        width: auto;
+      }
+    }
+
+    &-status {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 120%;
+
+      width: 100%;
+      margin-right: auto;
+    }
+
+    &-stars {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.7rem;
+
+      margin-right: 3rem;
+
+      @include sm {
+        width: 50%;
+        margin-right: 0;
+      }
+    }
+
+    &-trophies {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.7rem;
+
+      @include sm {
+        width: 50%;
+      }
+    }
+
+    &-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.8rem;
+      height: 3.8rem;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

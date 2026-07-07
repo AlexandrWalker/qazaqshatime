@@ -223,6 +223,7 @@
 
         @include sm {
           height: 1.6rem;
+          transform: rotate(-90deg) translate(-34%, -92%);
         }
 
         &::-webkit-progress-bar {
