@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru" class="task-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+            @@include('./blocks/general__tabs.html')
+            @@include('./blocks/general__lesson.html')
+            <div class="general__content">
+              <div class="general__control">
+                <div class="general__back">
+                  <i class="icon-"></i>
+                  Назад
+                </div>
+              </div>
+
+              <div class="task">
+                <div class="task__inner">
+                  <div class="task__head">
+                    <div class="task__head-title">
+                      У12 · Сағат неше? — Который час?
+                    </div>
+                    <div class="task__head-text">
+                      Упражнение <span class="current-step">1</span> из <span class="total-steps">4</span>
+                    </div>
+                    <div class="task__progress">
+                      <div class="task__segment current"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                    </div>
+                  </div>
+                  <div class="task__body">
+                    <div class="task__result task__done">
+                      <div class="task__result-head">
+                        <div class="task__result-cover">
+                          <img src="./../images/temp/done-cover.png" alt="">
+                        </div>
+                        <div class="task__result-title">
+                          Урок 1 завершен!
+                        </div>
+                        <div class="task__result-items">
+                          <div class="task__result-item">
+                            <span>
+                              86%
+                            </span>
+                            <p>
+                              Точность
+                            </p>
+                          </div>
+                          <div class="task__result-item">
+                            <span>
+                              45 минут
+                            </span>
+                            <p>
+                              Время
+                            </p>
+                          </div>
+                          <div class="task__result-item">
+                            <span>
+                              +15 кубков
+                            </span>
+                            <p>
+                              Полученный опыт
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="task__result-body">
+                        <div class="task__result-subtitle">
+                          Пройденные шаги:
+                        </div>
+                        <div class="task__done-items">
+                          <div class="task__done-item task__done-item--success">
+                            <div class="task__done-item--icon">
+                              <i class="icon-"></i>
+                            </div>
+                            <div class="task__done-item--title">
+                              Шаг 1
+                            </div>
+                            <div class="task__done-item--text">
+                              0 ошибок
+                            </div>
+                          </div>
+                          <div class="task__done-item task__done-item--fail">
+                            <div class="task__done-item--icon">
+                              <i class="icon-"></i>
+                            </div>
+                            <div class="task__done-item--title">
+                              Шаг 2
+                            </div>
+                            <div class="task__done-item--text">
+                              2 ошибок
+                            </div>
+                          </div>
+                          <div class="task__done-item task__done-item--fail">
+                            <div class="task__done-item--icon">
+                              <i class="icon-"></i>
+                            </div>
+                            <div class="task__done-item--title">
+                              Шаг 3
+                            </div>
+                            <div class="task__done-item--text">
+                              2 ошибок
+                            </div>
+                          </div>
+                          <div class="task__done-item task__done-item--fail">
+                            <div class="task__done-item--icon">
+                              <i class="icon-"></i>
+                            </div>
+                            <div class="task__done-item--title">
+                              Шаг 4
+                            </div>
+                            <div class="task__done-item--text">
+                              2 ошибок
+                            </div>
+                          </div>
+                          <div class="task__done-item task__done-item--success">
+                            <div class="task__done-item--icon">
+                              <i class="icon-"></i>
+                            </div>
+                            <div class="task__done-item--title">
+                              Шаг 5
+                            </div>
+                            <div class="task__done-item--text">
+                              0 ошибок
+                            </div>
+                          </div>
+                          <div class="task__done-item task__done-item--success">
+                            <div class="task__done-item--icon">
+                              <i class="icon-"></i>
+                            </div>
+                            <div class="task__done-item--title">
+                              Шаг 6
+                            </div>
+                            <div class="task__done-item--text">
+                              0 ошибок
+                            </div>
+                          </div>
+                          <div class="task__done-item task__done-item--success">
+                            <div class="task__done-item--icon">
+                              <i class="icon-"></i>
+                            </div>
+                            <div class="task__done-item--title">
+                              Шаг 7
+                            </div>
+                            <div class="task__done-item--text">
+                              0 ошибок
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="task__control">
+                      <button class="btn btn--green">
+                        проверить
+                      </button>
+                      <button class="btn js-next-btn">
+                        Далее
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            @@include('./blocks/sidebar.html')
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

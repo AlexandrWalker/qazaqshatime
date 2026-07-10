@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru" class="task-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+            @@include('./blocks/general__tabs.html')
+            @@include('./blocks/general__lesson.html')
+            <div class="general__content">
+              @@include('./blocks/general__scenes.html')
+              <div class="general__control">
+                <div class="general__back">
+                  <i class="icon-"></i>
+                  Назад
+                </div>
+              </div>
+
+              <div class="task">
+                <div class="task__inner">
+                  <div class="task__head">
+                    <div class="task__head-title">
+                      У12 · Сағат неше? — Который час?
+                    </div>
+                    <div class="task__head-text">
+                      Упражнение <span class="current-step">1</span> из <span class="total-steps">4</span>
+                    </div>
+                    <div class="task__progress">
+                      <div class="task__segment current"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                    </div>
+                  </div>
+                  <div class="task__body">
+                    <div class="task__block">
+                      <div class="task__block-head">
+                        <div class="task__block-title">
+                          Опишите ситуацию
+                        </div>
+                      </div>
+                      <div class="task__block-body">
+
+                        <div class="task__situation">
+                          <div class="task__situation-text">
+                            Ты в офисе утром. <br>
+                            Твое приветствие?
+                          </div>
+                          <div class="task__situation-cover">
+                            <img src="./../images/temp/situation-cover.png" alt="">
+                          </div>
+                        </div>
+
+                        <textarea class="task__situation-textarea" name="" rows="3" placeholder="Опишите ситуацию"></textarea>
+
+                      </div>
+                    </div>
+                    <div class="task__control">
+                      <button class="btn btn--green">
+                        проверить
+                      </button>
+                      <button class="btn js-next-btn">
+                        Далее
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            @@include('./blocks/sidebar.html')
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

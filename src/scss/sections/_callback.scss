@@ -15,9 +15,9 @@
 
     position: relative;
 
-    @include md {
-      padding: 4rem;
-    }
+    // @include md {
+    //   padding: 4rem;
+    // }
 
     @include sm {
       gap: 2rem;
@@ -31,7 +31,7 @@
     .btn {
       --btn-padding-x: 12rem;
 
-      @include md {
+      @include sm {
         --btn-padding-x: 2rem;
 
         width: 100%;
@@ -46,7 +46,7 @@
     top: 9rem;
     right: 5.7rem;
 
-    @include md {
+    @include sm {
       display: none;
     }
 

@@ -83,7 +83,7 @@
     margin-top: -1.1rem;
     flex-shrink: 0;
 
-    @include md {
+    @include sm {
       display: none;
     }
   }

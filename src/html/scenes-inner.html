@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru" class="scenes-inner-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            @@include('./blocks/general__lesson.html')
+
+            <div class="general__content">
+
+              <div class="scenes-inner">
+                <div class="scenes-inner__head">
+                  <div class="scenes-inner__head-img">
+                    <img src="./../images/temp/training-block-cover-3.png" alt="">
+                  </div>
+                  <div class="scenes-inner__head-wrap">
+                    Сценка 3 · Чекпоинт 1
+                  </div>
+                </div>
+                <div class="scenes-inner__body">
+                  <div class="scenes-inner__content">
+                    <div class="scenes-inner__title">
+                      Время и дни недели
+                    </div>
+                    <div class="scenes-inner__tags">
+                      <div class="scenes-inner__tags-item">
+                        <i></i>
+                        <span>
+                          3 вопроса
+                        </span>
+                      </div>
+                      <div class="scenes-inner__tags-item">
+                        <i></i>
+                        <span>
+                          ~5 минут
+                        </span>
+                      </div>
+                      <div class="scenes-inner__tags-item">
+                        <i></i>
+                        <span>
+                          Из уроков 6 и 12
+                        </span>
+                      </div>
+                    </div>
+                    <div class="scenes-inner__text">
+                      <p>
+                        <b>Твоя роль:</b> Ты встречаешь коллегу в коридоре. Он спрашивает который час и когда у вас
+                        следующая
+                        встреча. Отвечай по-казахски!
+                      </p>
+                    </div>
+                    <a class="btn btn--green" href="/">
+                      Начать сценку
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

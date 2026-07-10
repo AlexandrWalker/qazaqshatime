@@ -18,9 +18,9 @@
     gap: 3.6rem;
     max-width: 60rem;
 
-    @include md {
-      gap: 32rem;
-    }
+    // @include md {
+    //   gap: 32rem;
+    // }
 
     @include sm {
       gap: 2rem;
@@ -78,14 +78,14 @@
     right: -2.6rem;
     z-index: 1;
 
-    @include md {
-      width: 100%;
+    // @include md {
+    //   width: 100%;
 
-      top: 57%;
-      right: unset;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    //   top: 57%;
+    //   right: unset;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    // }
 
     @include sm {
       width: calc(100% + (var(--container-padding) * 2));

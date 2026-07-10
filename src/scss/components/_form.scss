@@ -153,10 +153,10 @@
       &:checked {
 
         &+.form-radio-item {
-          border-color: var(--black);
+          // border-color: var(--black);
 
           &::before {
-            background-color: var(--accent);
+            background-color: var(--dark-magenta);
           }
 
           &+.form-radio-text {
@@ -168,19 +168,26 @@
 
     &-item {
       display: flex;
-      width: 1.6rem;
-      height: 1.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
       border-radius: 50%;
-      border: 0.1rem solid var(--black-10);
+      border: 0.1rem solid var(--white);
+      box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+      background-color: var(--white);
       transition: border-color 0.15s ease;
 
       position: relative;
 
+      @include sm {
+        width: 2rem;
+        height: 2rem;
+      }
+
       &::before {
         content: "";
         display: block;
-        width: 1rem;
-        height: 1rem;
+        width: 1.2rem;
+        height: 1.2rem;
         background-color: var(--black);
         border-radius: 50%;
         transition: background-color 0.15s ease;
@@ -191,6 +198,11 @@
         left: 50%;
         z-index: 1;
         transform: translate(-50%, -50%);
+
+        @include sm {
+          width: 0.8rem;
+          height: 0.8rem;
+        }
       }
     }
 
@@ -201,6 +213,10 @@
       font-size: 1.4rem;
       line-height: 143%;
       color: var(--black-50);
+
+      @include sm {
+        font-size: 1.3rem;
+      }
     }
   }
 

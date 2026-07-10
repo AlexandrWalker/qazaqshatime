@@ -12,9 +12,9 @@
     border-radius: 1.5rem;
     padding: 4rem;
 
-    @include md {
-      gap: 3rem;
-    }
+    // @include md {
+    //   gap: 3rem;
+    // }
 
     @include sm {
       gap: 3rem;
@@ -27,9 +27,9 @@
     flex-direction: column;
     gap: 6rem;
 
-    @include md {
-      gap: 3rem;
-    }
+    // @include md {
+    //   gap: 3rem;
+    // }
 
     @include sm {
       gap: 3rem;
@@ -42,23 +42,25 @@
     align-items: center;
     gap: 6.6rem;
 
-    @include md {
-      gap: 3rem;
-    }
+    // @include md {
+    //   gap: 3rem;
+    // }
 
     @include sm{
       flex-direction: column;
+      gap: 3rem;
     }
 
     &:nth-child(2) {
       align-items: flex-start;
       gap: 3.5rem;
 
-      @include md {
-        align-items: center;
-      }
+      // @include md {
+      //   align-items: center;
+      // }
 
       @include sm{
+        align-items: center;
         gap: 3rem;
       }
 
@@ -74,9 +76,9 @@
     height: auto;
     flex-shrink: 0;
 
-    @include md {
-      width: 22rem;
-    }
+    // @include md {
+    //   width: 22rem;
+    // }
 
     @include sm{
       width: 100%;

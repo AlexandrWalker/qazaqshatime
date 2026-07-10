@@ -1,0 +1,262 @@
+@use './../mixins' as *;
+
+.scenes {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include sm {
+    gap: 2rem;
+  }
+
+  .training {
+
+    &__item {
+
+      &-head {
+
+        @include sm {
+          display: grid;
+          grid-template-rows: 1fr auto;
+          gap: 0.7rem 1.5rem;
+          border-radius: 1.5rem;
+          padding: 0.5rem;
+        }
+      }
+
+      &-img {
+
+        @include sm {
+          height: 100%;
+          grid-row: 1/3;
+        }
+      }
+
+      &-wrap {
+
+        @include sm {
+          width: 100%;
+          grid-row: 1/2;
+        }
+      }
+
+      &-progress {
+
+        @include sm {
+          justify-content: flex-start;
+          grid-row: 2/3;
+        }
+      }
+    }
+  }
+
+  &__level {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 110%;
+      color: var(--medium-gray);
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    &-item {
+
+      &:nth-child(1) {
+        --scenes-item-color: var(--dark-magenta);
+      }
+
+      &:nth-child(2) {
+        --scenes-item-color: var(--bright-orange);
+      }
+
+      &:nth-child(3) {
+        --scenes-item-color: var(--blue);
+      }
+
+      .form-radio-label {
+        gap: 0.5rem;
+      }
+
+      .form-radio-input:checked+.form-radio-item::before {
+        background-color: var(--scenes-item-color);
+      }
+
+      .form-radio-item::before {
+        background-color: transparent;
+      }
+
+      .form-radio-text {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        color: var(--scenes-item-color);
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include sm {
+      gap: 3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include sm {
+      gap: 1rem;
+    }
+
+    &-head {}
+
+    &-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 120%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--medium-gray);
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+
+      @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  &__block {
+    --item-bg-color: var(--white);
+    --item-border-color: var(--medium-gray);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    min-height: 22rem;
+    padding: 1rem 1rem 3rem 1rem;
+    background-color: var(--item-bg-color);
+    border: 0.2rem solid var(--item-border-color);
+    box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+    border-radius: 2rem;
+
+    position: relative;
+
+
+    @include sm {
+      min-height: 12rem;
+      padding: 1rem 1rem 2rem 1rem;
+    }
+
+    &--success {
+      --item-bg-color: var(--lime-green-20);
+      --item-border-color: var(--lime-green);
+
+      opacity: 1;
+    }
+
+    &--fail {
+      --item-bg-color: var(--bright-orange-20);
+      --item-border-color: var(--bright-orange);
+
+      opacity: 1;
+    }
+
+    &--lock {
+      filter: saturate(0%);
+      opacity: 0.4;
+    }
+
+    &-check {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.7rem;
+
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1;
+
+
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 150%;
+        color: var(--medium-gray);
+
+        @include sm {
+          display: none;
+        }
+      }
+    }
+
+    &-img {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 9rem;
+
+      @include sm {
+        height: 7.2rem;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-title {
+      max-width: 16rem;
+
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  }
+}

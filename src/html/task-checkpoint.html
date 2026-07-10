@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru" class="task-page task-checkpoint-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+            @@include('./blocks/general__tabs.html')
+            @@include('./blocks/general__lesson.html')
+            <div class="general__content">
+              <div class="general__control">
+                <div class="general__back">
+                  <i class="icon-"></i>
+                  Назад
+                </div>
+              </div>
+
+              <div class="task">
+                <div class="task__inner">
+                  <div class="task__head">
+                    <div class="task__head-title">
+                      У12 · Сағат неше? — Который час?
+                    </div>
+                    <div class="task__head-text">
+                      Упражнение <span class="current-step">1</span> из <span class="total-steps">4</span>
+                    </div>
+                    <div class="task__progress">
+                      <div class="task__segment current"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                    </div>
+                  </div>
+                  <div class="task__body">
+                    <div class="task__result">
+                      <div class="task__result-head">
+                        <div class="task__result-title">
+                          ЧЕКПОИНТ 1: АЛҒАШҚЫ ҚАДАМ
+                        </div>
+                        <div class="task__result-items">
+                          <div class="task__result-item">
+                            <span>
+                              1-14
+                            </span>
+                            <p>
+                              Уроки
+                            </p>
+                          </div>
+                          <div class="task__result-item">
+                            <span>
+                              +15 кубков
+                            </span>
+                            <p>
+                              Полученный опыт
+                            </p>
+                          </div>
+                          <div class="task__result-item">
+                            <span>
+                              20-25
+                            </span>
+                            <p>
+                              минут
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="task__result-body">
+                        <div class="task__checkpoint-items">
+                          <div class="task__checkpoint-item">
+                            <div class="task__checkpoint-img">
+                              <img src="./../images/temp/checkpoint-item-img-1.png" alt="">
+                            </div>
+                            <div class="task__checkpoint-title">
+                              Лексика
+                            </div>
+                            <div class="task__checkpoint-progress">
+                              <progress value="100" max="100"></progress>
+                              <span>
+                                100%
+                              </span>
+                            </div>
+                          </div>
+                          <div class="task__checkpoint-item">
+                            <div class="task__checkpoint-img">
+                              <img src="./../images/temp/checkpoint-item-img-2.png" alt="">
+                            </div>
+                            <div class="task__checkpoint-title">
+                              Грамматика
+                            </div>
+                            <div class="task__checkpoint-progress">
+                              <progress value="40" max="100"></progress>
+                              <span>
+                                40%
+                              </span>
+                            </div>
+                          </div>
+                          <div class="task__checkpoint-item task__checkpoint-item--lock">
+                            <div class="task__checkpoint-img">
+                              <img src="./../images/temp/checkpoint-item-img-3.png" alt="">
+                            </div>
+                            <div class="task__checkpoint-title">
+                              Аудирование
+                            </div>
+                            <div class="task__checkpoint-progress">
+                              <progress value="0" max="100"></progress>
+                              <span>
+                                0%
+                              </span>
+                            </div>
+                          </div>
+                          <div class="task__checkpoint-item task__checkpoint-item--lock">
+                            <div class="task__checkpoint-img">
+                              <img src="./../images/temp/checkpoint-item-img-4.png" alt="">
+                            </div>
+                            <div class="task__checkpoint-title">
+                              Чтение
+                            </div>
+                            <div class="task__checkpoint-progress">
+                              <progress value="0" max="100"></progress>
+                              <span>
+                                0%
+                              </span>
+                            </div>
+                          </div>
+                          <div class="task__checkpoint-item task__checkpoint-item--lock">
+                            <div class="task__checkpoint-img">
+                              <img src="./../images/temp/checkpoint-item-img-5.png" alt="">
+                            </div>
+                            <div class="task__checkpoint-title">
+                              Говорение
+                            </div>
+                            <div class="task__checkpoint-progress">
+                              <progress value="0" max="100"></progress>
+                              <span>
+                                0%
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="task__control">
+                          <button class="btn btn--green">
+                            ТЕСТТІ БАСТАУ
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            @@include('./blocks/sidebar.html')
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')
