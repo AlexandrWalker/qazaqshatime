@@ -17,6 +17,18 @@
       flex-direction: column-reverse;
       gap: 5rem;
     }
+
+    .header-login & {
+
+      @include sm {
+        flex-direction: column-reverse;
+        align-items: unset;
+        gap: 5rem;
+        padding: 2.4rem 0 2.4rem;
+        background: unset;
+        box-shadow: unset;
+      }
+    }
   }
 
   &__left {
@@ -84,6 +96,11 @@
     flex-direction: row;
     align-items: center;
     gap: 5.6rem;
+
+    @include sm {
+      justify-content: space-between;
+      gap: 1rem;
+    }
   }
 
   &__item {
@@ -96,9 +113,22 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 120%;
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
   }
 
   &__profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 120%;

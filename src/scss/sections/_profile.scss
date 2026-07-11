@@ -10,18 +10,20 @@
   border-radius: 1.5rem;
   box-shadow: 0 4px 15px 0 rgba(94, 58, 67, 0.15);
   background: #fff;
+
   @include sm {
     padding: 3rem 2rem;
   }
 
-  h1.profile__title{
+  h1.profile__title {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 120%;
     color: #1D2D8C;
   }
-  h2.profile__title{
+
+  h2.profile__title {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 2.4rem;
@@ -29,62 +31,74 @@
     color: #1D2D8C;
   }
 
-  &-edit__inputs{
+  &-edit__inputs {
     display: grid;
     grid-template-columns: repeat(2, 36.8rem);
     gap: 2rem 5rem;
-    &-col{
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+
+    &-col {
       display: grid;
       gap: 2rem;
 
-      .btn{
+      .btn {
         width: 100%;
       }
     }
   }
-  .user{
+
+  .user {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 3rem;
-  
+
     @include sm {
       flex-direction: column;
     }
-  
-    &__avatar{
+
+    &__avatar {
       width: 17rem;
       height: 17rem;
     }
-  
-    &__actions{
+
+    &__actions {
       display: flex;
       flex-direction: column;
       gap: 2.4rem;
     }
-  
-    &__info{
+
+    &__info {
       display: grid;
       gap: 0.8rem;
+
+      @include sm {
+        text-align: center;
+      }
     }
   }
 }
 
 
-.achivments{
+.achivments {
   display: grid;
   gap: 2rem;
 
-  &__header{
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+
     @include sm {
       flex-direction: column;
       align-items: start;
     }
-    &-all{
+
+    &-all {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -97,13 +111,13 @@
     }
   }
 
-  &__list{
+  &__list {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  &__item{
+  &__item {
     width: 100%;
     padding: 1.8rem 3.6rem 1.8rem 1.8rem;
 
@@ -112,7 +126,7 @@
     align-items: center;
     gap: 1rem 2.7rem;
 
-    border: 2px solid #e4e8ef;
+    border: 0.2rem solid #e4e8ef;
     border-radius: 1.6rem;
 
     @include sm {
@@ -120,43 +134,44 @@
       padding: 2rem;
     }
 
-    &:nth-child(3n + 2){
+    &:nth-child(3n + 2) {
       border-color: #e3672a;
     }
-    
-    &:nth-child(3n + 3){
+
+    &:nth-child(3n + 3) {
       border-color: #fccd05;
     }
 
-    &-img{
+    &-img {
       width: 6.8rem;
       height: 6.2rem;
+
       @include sm {
         margin-inline: auto;
       }
     }
 
-    &-descr{
+    &-descr {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
     }
 
-    &-title{
+    &-title {
       font-weight: 500;
       font-size: 2rem;
       line-height: 120%;
       color: #636363;
     }
 
-    &-subtitle{
+    &-subtitle {
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 150%;
       color: #9F248F;
     }
 
-    &-progress{
+    &-progress {
       margin-left: auto;
 
       display: flex;
@@ -169,11 +184,12 @@
       line-height: 150%;
       text-align: right;
       color: #636363;
+
       @include sm {
         width: 100%;
       }
 
-      &-track{
+      &-track {
         position: relative;
         width: 34rem;
         height: 1rem;
@@ -181,12 +197,13 @@
         border-radius: 1.6rem;
         background-color: rgba(#636363, 0.2);
         overflow: hidden;
+
         @include sm {
           width: 100%;
         }
       }
 
-      &-thumb{
+      &-thumb {
         position: absolute;
         top: 0;
         left: 0;
@@ -199,11 +216,11 @@
   }
 }
 
-.subscription{
+.subscription {
   display: grid;
   gap: 2rem;
 
-  &__box{
+  &__box {
     width: 100%;
     padding: 1.4rem 1.4rem 1.4rem 3rem;
 
@@ -222,7 +239,7 @@
     }
   }
 
-  &__title{
+  &__title {
     font-weight: 700;
     font-size: 2rem;
     line-height: 110%;
@@ -231,19 +248,19 @@
     color: #636363;
   }
 
-  &__actions{
+  &__actions {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 2.5rem;
 
     @include sm {
-      
+
       flex-direction: column-reverse;
     }
   }
 
-  &__change-tarif{
+  &__change-tarif {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 1.6rem;

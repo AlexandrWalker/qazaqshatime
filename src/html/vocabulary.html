@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru" class="main-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            @@include('./blocks/general__lesson.html')
+
+            <div class="general__content">
+
+              <div class="general__title">
+                <h1>
+                  Словарь
+                </h1>
+              </div>
+
+              <div class="vocabulary">
+                <div class="vocabulary__blocks">
+                  <div class="vocabulary__block">
+                    <div class="vocabulary__block-cover">
+                      <img src="./../images/temp/vocabulary-block-cover-1.png" alt="">
+                    </div>
+                    <div class="vocabulary__block-wrap">
+                      <div class="vocabulary__block-tags">
+                        <i class="icon-"></i>
+                        <span>
+                          Справочник
+                        </span>
+                      </div>
+                      <div class="vocabulary__block-title">
+                        Азбука
+                      </div>
+                    </div>
+                    <div class="vocabulary__block-text">
+                      <span>
+                        42 буквы
+                      </span>
+                      <i class="icon-"></i>
+                    </div>
+                  </div>
+                  <div class="vocabulary__block">
+                    <div class="vocabulary__block-cover">
+                      <img src="./../images/temp/vocabulary-block-cover-2.png" alt="">
+                    </div>
+                    <div class="vocabulary__block-wrap">
+                      <div class="vocabulary__block-tags">
+                        <i class="icon-"></i>
+                        <span>
+                          Мои слова
+                        </span>
+                      </div>
+                      <div class="vocabulary__block-title">
+                        Сохранённые <br> слова и фразы
+                      </div>
+                    </div>
+                    <div class="vocabulary__block-text">
+                      <span>
+                        34 сохранено
+                      </span>
+                      <i class="icon-"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

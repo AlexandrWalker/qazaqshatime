@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" class="scenes-inner-page scenes-lesson-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            @@include('./blocks/general__lesson.html')
+
+            <div class="general__content">
+
+              <div class="scenes__progress-wrapper">
+                <div class="scenes__progress-title">
+                  Вопрос 3 из 3 · Выбери ответишь?
+                </div>
+                <div class="scenes__progress">
+                  <div class="scenes__segment passed"></div>
+                  <div class="scenes__segment passed"></div>
+                  <div class="scenes__segment current"></div>
+                </div>
+              </div>
+
+              <div class="scenes-inner">
+                <div class="scenes-inner__head">
+                  <div class="scenes-inner__head-img">
+                    <img src="./../images/temp/training-block-cover-3.png" alt="">
+                  </div>
+                </div>
+                <div class="scenes-inner__body">
+                  <div class="scenes-inner__content">
+                    <div class="scenes-inner__title">
+                      Разыграй конец разговора. Ты — Асан.
+                    </div>
+                    <div class="scenes-inner__block">
+                      <div class="scenes-choice">
+                        <div class="scenes-choice__chat">
+                          <div class="task__chat task__dialogue">
+                            <div class="task__chat-item">
+                              <div class="task__chat-avatar">
+                                <img src="./../images/temp/blank-avatar-1.png" alt="">
+                              </div>
+                              <div class="task__chat-name">
+                                Коллега
+                              </div>
+                              <div class="task__chat-wrap">
+                                <p>
+                                  Жақсы, сәрсенбіде кездесейік!
+                                </p>
+                                <span>
+                                  Хорошо, встретимся в среду!
+                                </span>
+                              </div>
+                            </div>
+                            <div class="task__chat-item task__chat-item--reverse">
+                              <div class="task__chat-avatar">
+                                <img src="./../images/temp/blank-avatar-1.png" alt="">
+                              </div>
+                              <div class="task__chat-name">
+                                Ты — Асан
+                              </div>
+                              <div class="task__chat-wrap task__chat-wrap--dotted">
+                                <p>
+                                  Жарайды! Сау болыңыз!
+                                </p>
+                                <div class="task__chat-btn">
+                                  <i></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="btn btn--green" href="/">
+                      Завершить сценку
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: 3rem;
 
+  .scenes-lesson-page & {
+    gap: 0;
+  }
+
   &-page {
 
     .general__lesson {
@@ -27,7 +31,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: var(--bright-orange-20);
+    background-color: var(--bright-orange-20);
     border-radius: 0px 0px 2rem 2rem;
     min-height: 22rem;
     margin-top: -3rem;
@@ -36,6 +40,15 @@
 
     @include sm {
       border-radius: 2rem;
+    }
+
+    .scenes-lesson-page & {
+      border-radius: 2rem 2rem 0px 0px;
+      margin-top: 0;
+    }
+
+    .scenes-result-page & {
+      background-color: var(--lime-green-20);
     }
 
     &-img {
@@ -67,7 +80,19 @@
     }
   }
 
-  &__body {}
+  &__body {
+
+    .scenes-lesson-page & {
+      padding: 4rem;
+      background-color: var(--white);
+      box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+      border-radius: 0 0 2rem 2rem;
+
+      @include sm {
+        padding: 2rem;
+      }
+    }
+  }
 
   &__content {
 
@@ -87,6 +112,23 @@
     font-size: 3.2rem;
     line-height: 120%;
     color: var(--blue);
+
+    @include sm {
+      font-size: 2.4rem;
+    }
+
+    .scenes-result-page & {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 3rem;
+
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: var(--medium-gray);
   }
 
   &__tags {
@@ -138,5 +180,43 @@
       line-height: 120%;
       color: var(--medium-gray);
     }
+
+    &-items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    &-item {
+      padding: 0.5rem 1rem;
+      background-color: var(--white);
+      border-radius: 20rem;
+
+      font-size: 1.4rem;
+      line-height: 150%;
+      color: var(--blue);
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__block {
+    margin-bottom: 2rem;
+  }
+
+  .task__result-items {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .task__control {
+    justify-content: flex-start;
   }
 }

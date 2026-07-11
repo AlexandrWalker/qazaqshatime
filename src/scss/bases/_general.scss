@@ -140,8 +140,21 @@
       color: var(--lime-green);
     }
 
-    i {
-      font-size: 3.2rem;
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.2rem;
+      height: 3.2rem;
+
+      svg {
+        fill: var(--white);
+        transition: all 0.3s ease;
+
+        .general__tab--active & {
+          fill: var(--lime-green);
+        }
+      }
     }
 
     p {
@@ -153,7 +166,7 @@
       text-transform: uppercase;
 
       @include sm {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
   }

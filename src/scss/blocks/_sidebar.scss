@@ -21,7 +21,7 @@
   .sidebar-rating{
     padding: 3rem 0.6rem 4rem 1.5rem;
 
-    border-radius: 20px;
+    border-radius: 2rem;
     background: linear-gradient(50deg, #9f248f 0%, #1d2d8c 100%);
 
     color: var(--white);
@@ -39,7 +39,7 @@
 
     &__items{
       max-height: 54.5rem;
-      padding-right: 10px;
+      padding-right: 1rem;
 
       display: flex;
       flex-direction: column;
@@ -48,22 +48,22 @@
       overflow-y: auto;
 
       &::-webkit-scrollbar {
-        width: 4px;
+        width: 0.4rem;
       }
       &::-webkit-scrollbar-track {
         background: transparent;
       }
       &::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
+        border-radius: 0.8rem;
       }
     }
 
     &__item{
       padding: 1.1rem 0.7rem 1.1rem 1.2rem;
 
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
+      border: 0.2rem solid rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;
       box-shadow: 0 4px 15px 0 rgba(94, 58, 67, 0.15);
 
       display: flex;
@@ -132,8 +132,8 @@
     gap: 3rem;
 
     background-color: #fff;
-    border: 1px solid #F8F9FE;
-    border-radius: 20px;
+    border: 0.1rem solid #F8F9FE;
+    border-radius: 2rem;
 
     &__btns{
       display: flex;

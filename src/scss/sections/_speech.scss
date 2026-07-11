@@ -39,7 +39,7 @@
   .exercises__item-block--fail{
     .exercises__item-block--check i{
       background-color: transparent;
-      border: 2px dashed var(--item-icon-color);
+      border: 0.2rem dashed var(--item-icon-color);
     }
   }
 }

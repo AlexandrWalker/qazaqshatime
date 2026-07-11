@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru" class="scenes-inner-page scenes-lesson-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            @@include('./blocks/general__lesson.html')
+
+            <div class="general__content">
+
+              <div class="scenes__progress-wrapper">
+                <div class="scenes__progress-title">
+                  Вопрос 1 из 3 · Выбери ответишь?
+                </div>
+                <div class="scenes__progress">
+                  <div class="scenes__segment current"></div>
+                  <div class="scenes__segment"></div>
+                  <div class="scenes__segment"></div>
+                </div>
+              </div>
+
+              <div class="scenes-inner">
+                <div class="scenes-inner__head">
+                  <div class="scenes-inner__head-img">
+                    <img src="./../images/temp/training-block-cover-3.png" alt="">
+                  </div>
+                </div>
+                <div class="scenes-inner__body">
+                  <div class="scenes-inner__content">
+                    <div class="scenes-inner__title">
+                      Коллега спрашивает: «Сағат неше?»
+                    </div>
+                    <div class="scenes-inner__subtitle">
+                      <p>
+                        Сейчас 14:30. Как ты ответишь?
+                      </p>
+                    </div>
+                    <div class="scenes-inner__block">
+                      <div class="scenes-choice">
+                        <div class="scenes-choice__items">
+
+                          <div class="scenes-choice__item scenes-item-js">
+                            <div class="scenes-choice__item-letter">
+                              <span>
+                                А
+                              </span>
+                            </div>
+                            <div class="scenes-choice__item-text">
+                              Сағат екі отыз.
+                            </div>
+                          </div>
+                          <div class="scenes-choice__item scenes-item-js">
+                            <div class="scenes-choice__item-letter">
+                              <span>
+                                Б
+                              </span>
+                            </div>
+                            <div class="scenes-choice__item-text">
+                              Сағат жарым үш.
+                            </div>
+                          </div>
+                          <div class="scenes-choice__item scenes-item-js">
+                            <div class="scenes-choice__item-letter">
+                              <span>
+                                В
+                              </span>
+                            </div>
+                            <div class="scenes-choice__item-text">
+                              Сағат бес.
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <a class="btn btn--green" href="/">
+                      проверить
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

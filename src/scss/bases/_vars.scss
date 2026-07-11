@@ -10,7 +10,7 @@
 
   --body-bg: #F8F9FE;
 
-  /* Светлые оттенки (White & Light Grays) */
+  /* Светлые оттенки */
   --white: #fffffe;
   --white-10: rgba(255, 255, 254, 0.1);
   --white-20: rgba(255, 255, 254, 0.2);
@@ -23,7 +23,7 @@
   --snow-white: #f6f6f6;
   --alabaster: #f6e6cc;
 
-  /* Серые оттенки (Grays) */
+  /* Серые оттенки */
   --light-gray: #cccccc;
   --light-gray-20: rgba(204, 204, 204, 0.2);
   --light-gray-30: rgba(204, 204, 204, 0.3);
@@ -32,13 +32,13 @@
   --medium-gray-20: rgba(99, 100, 99, 0.2);
   --medium-gray-30: rgba(99, 100, 99, 0.3);
 
-  /* Темные оттенки (Black & Darks) */
+  /* Темные оттенки */
   --black: #1a1919;
   --black-20: rgba(26, 25, 25, 0.2);
   --black-50: rgba(26, 25, 25, 0.5);
   --dark-burgundy: #5e3a43;
 
-  /* Синие оттенки (Blues) */
+  /* Синие оттенки */
   --blue: #1d2d8c;
   --blue-10: rgba(29, 45, 140, 0.1);
   --blue-20: #1d2d8c33;
@@ -49,35 +49,32 @@
   --electric-blue: #3e3ef4;
   --sky-blue: #01b4ff;
 
-  /* Бирюзовые и Зеленые оттенки (Teals & Greens) */
+  /* Бирюзовые и Зеленые оттенки */
   --cyan: #17e9e0;
   --mint: #2bc995;
   --emerald: #6bcb77;
   --lime-green: #b4d335;
   --lime-green-20: #b4d33533;
 
-  /* Желтые и Оранжевые оттенки (Yellows & Oranges) */
+  /* Желтые и Оранжевые оттенки */
   --amber-yellow: #fccd05;
   --bright-orange: #f37021;
   --bright-orange-20: #f3702133;
   --tangerine: #e3672a;
 
-  /* Красные и Розовые оттенки (Reds & Pinks) */
+  /* Красные и Розовые оттенки */
   --crimson-red: #da2a55;
   --magenta-rose: #8e2b7d;
 
-  /* Фиолетовые оттенки (Purples) */
+  /* Фиолетовые оттенки */
   --deep-purple: #6a2c91;
   --dark-magenta: #9f248f;
   --dark-magenta-10: rgba(159, 36, 143, 0.1);
+  --dark-magenta-20: rgba(159, 36, 143, 0.2);
+  --dark-magenta-30: rgba(159, 36, 143, 0.3);
   --plum-purple: #96248d;
   --orchid-purple: #94268f;
   --bright-purple: #a64ac9;
-
-  @include md {
-    // --container-width: 79.4rem;
-    // --container-padding: 2rem;
-  }
 
   @include sm {
     --container-width: 35.3rem;
