@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" class="main-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            <div class="general__content">
+
+              <form class="profile">
+                <h1 class="profile__title">Профиль</h1>
+                <div class="user">
+                  <div class="user__avatar">
+                    <img src="./../images/temp/user-purple.svg" alt="user">
+                  </div>
+                  <div class="user__actions">
+                    <div class="user__info">
+                      <span>Фото профиля</span>
+                    </div>
+                    <button class="btn">Выбрать файл</button>
+                  </div>
+                </div>
+                <div class="profile-edit__inputs">
+                  <div class="profile-edit__inputs-col">
+                    <div class="form-group">
+                      <label class="form-label">
+                        Имя
+                        <input class="form-input" name="name" type="text">
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">
+                        Email
+                        <input class="form-input" name="email" type="email">
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">
+                        Пароль
+                        <input class="form-input" name="password" type="password">
+                      </label>
+                    </div>
+                    <button class="btn btn--green">Сохранить</button>
+                    <button class="btn">Удалить аккаунт</button>
+                  </div>
+                  <div class="profile-edit__inputs-col">
+                    <!-- checkbox -->
+                  </div>
+                </div>
+              </form>
+
+            </div>
+
+            @@include('./blocks/sidebar-3.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

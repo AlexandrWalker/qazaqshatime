@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru" class="main-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            @@include('./blocks/general__lesson.html')
+
+            <div class="general__content">
+
+              <div class="general__control">
+                <div class="general__back">
+                  <i class="icon-"></i>
+                  Назад
+                </div>
+              </div>
+
+              <div class="exercises speech">
+
+                <div class="exercises__block">
+                  <div class="exercises__block-wrap">
+                    <div class="exercises__block-title">
+                      Речь
+                    </div>
+                    <div class="exercises__block-text">
+                      4 упражнения на урок · Выбери урок или запусти микс
+                    </div>
+                  </div>
+                </div>
+
+                <div class="scenes__level">
+                  <div class="scenes__level-title">
+                    Уровень:
+                  </div>
+                  <div class="scenes__level-items">
+                    <div class="scenes__level-item">
+                      <div class="form-radio">
+                        <label class="form-radio-label">
+                          <input class="form-radio-input" name="speech_lvl" type="radio" checked>
+                          <div class="form-radio-item"></div>
+                          <div class="form-radio-text">
+                            Начальный
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="scenes__level-item">
+                      <div class="form-radio">
+                        <label class="form-radio-label">
+                          <input class="form-radio-input" name="speech_lvl" type="radio">
+                          <div class="form-radio-item"></div>
+                          <div class="form-radio-text">
+                            Средний
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="scenes__level-item">
+                      <div class="form-radio">
+                        <label class="form-radio-label">
+                          <input class="form-radio-input" name="speech_lvl" type="radio">
+                          <div class="form-radio-item"></div>
+                          <div class="form-radio-text">
+                            Продвинутый
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exercises__items">
+                  <div class="exercises__item">
+                    <div class="exercises__item-head">
+                      <div class="exercises__item-count">
+                        1
+                      </div>
+                      <div class="exercises__item-wrap">
+                        <div class="exercises__item-title">
+                          Алғашқы қадам / Первые шаги
+                        </div>
+                        <div class="exercises__item-text">
+                          Приветствия, семья, числа, цвета, время, дом
+                        </div>
+                      </div>
+                      <div class="exercises__item-progress">
+                        <progress value="14" max="14"></progress>
+                        <div class="exercises__item-progress--wrap">
+                          <span>14/14</span>
+                          <i class="icon-"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exercises__item-body">
+                      <div class="exercises__item-blocks">
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 1
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 2
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 3
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 4
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 5
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 6
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 7
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 8
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 9
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 10
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 11
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 12
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 13
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 14
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Сәлем!
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exercises__item">
+                    <div class="exercises__item-head">
+                      <div class="exercises__item-count">
+                        2
+                      </div>
+                      <div class="exercises__item-wrap">
+                        <div class="exercises__item-title">
+                          Настоящее время
+                        </div>
+                        <div class="exercises__item-text">
+                          Профессии, глаголы, еда, магазин, хобби, город
+                        </div>
+                      </div>
+                      <div class="exercises__item-progress">
+                        <progress value="3" max="14"></progress>
+                        <div class="exercises__item-progress--wrap">
+                          <span>3/14</span>
+                          <i class="icon-"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exercises__item-body">
+                      <div class="exercises__item-blocks">
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 15
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Профессии
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--success">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Пройдено
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 16
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Глаголы
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block exercises__item-block--fail">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 17
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Настоящее
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Заблокировано
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 18
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Я работаю
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Заблокировано
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 19
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Я работаю
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Заблокировано
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 20
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Я работаю
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Заблокировано
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 21
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Я работаю
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Заблокировано
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 22
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Я работаю
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Заблокировано
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 23
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Я работаю
+                            </div>
+                          </div>
+                        </div>
+                        <div class="exercises__item-block">
+                          <div class="exercises__item-block--check">
+                            <i class="icon-"></i>
+                            <span>
+                              Заблокировано
+                            </span>
+                          </div>
+                          <div class="exercises__item-block--wrap">
+                            <div class="scenes__block-img">
+                              <img src="./../images/temp/speech-item-img-1.png" alt="">
+                            </div>
+                            <div class="exercises__item-block--title">
+                              Урок 24
+                            </div>
+                            <div class="exercises__item-block--text">
+                              Я работаю
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exercises__item exercises__item--lock">
+                    <div class="exercises__item-head">
+                      <div class="exercises__item-count">
+                        3
+                      </div>
+                      <div class="exercises__item-wrap">
+                        <div class="exercises__item-title">
+                          Прошедшее время
+                        </div>
+                        <div class="exercises__item-text">
+                          Вчера, путешествие, погода, здоровье, праздники
+                        </div>
+                      </div>
+                      <div class="exercises__item-progress">
+                        <progress value="0" max="14"></progress>
+                        <div class="exercises__item-progress--wrap">
+                          <span>0/14</span>
+                          <i class="icon-"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exercises__item-body">
+                      <div class="exercises__item-placeholder">
+                        <i class="icon-"></i>
+                        <span>
+                          Откроется после прохождения Чекпоинта 2
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

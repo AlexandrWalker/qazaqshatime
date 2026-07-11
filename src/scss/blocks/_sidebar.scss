@@ -17,4 +17,232 @@
       gap: 1.5rem;
     }
   }
+
+  .sidebar-rating{
+    padding: 3rem 0.6rem 4rem 1.5rem;
+
+    border-radius: 20px;
+    background: linear-gradient(50deg, #9f248f 0%, #1d2d8c 100%);
+
+    color: var(--white);
+
+    &__title{
+      width: 100%;
+      margin-bottom: 2.1rem;
+
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 120%;
+      text-align: center;
+    }
+
+    &__items{
+      max-height: 54.5rem;
+      padding-right: 10px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+      }
+    }
+
+    &__item{
+      padding: 1.1rem 0.7rem 1.1rem 1.2rem;
+
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px 0 rgba(94, 58, 67, 0.15);
+
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 120%;
+      color: #fff;
+
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .user{
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .score{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      img{
+        max-width: 2.4rem;
+      }
+
+      &:nth-child(1){
+        border-color: #fccd05;
+        .count{
+          color: #fccd05;
+        }
+      }
+      &:nth-child(2){
+        border-color: #ccc;
+        .count{
+          color: #ccc;
+        }
+      }
+      &:nth-child(3){
+        border-color: #e3672a;
+        .count{
+          color: #e3672a;
+        }
+      }
+    }
+
+    &__item-scores{
+      margin-left: auto;
+
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+  }
+
+  .sidebar-results{
+    padding: 2rem 2rem 3rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    background-color: #fff;
+    border: 1px solid #F8F9FE;
+    border-radius: 20px;
+
+    &__btns{
+      display: flex;
+      gap: 1rem;
+
+      .btn{
+        width: auto;
+        padding: 2.1rem 1.1rem 2rem;
+
+        border: 0.2rem solid #636463;
+
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+
+        flex-grow: 1;
+        &._active{
+          border-color: #b4d335;
+          background: rgba(180, 211, 53, 0.2);
+        }
+      }
+    }
+
+    &__ach{
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    &__progress{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      &-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.9rem;
+
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #000;
+
+        img{
+          max-width: 3.2rem;
+        }
+      }
+    }
+
+    &__items{
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      
+      .sidebar-results__item{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 200%;
+        color: #636463;
+
+        img{
+          max-width: 2.4rem;
+        }
+      }
+    }
+  }
+
+  .checkpoint{
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: #1d2d8c;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &__header{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 120%;
+      color: #fff;
+
+      img{
+        width: 4.9rem;
+        height: 5.2rem;
+      }
+    }
+    &__descr{
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 110%;
+      color: #fff;
+    }
+  }
 }
