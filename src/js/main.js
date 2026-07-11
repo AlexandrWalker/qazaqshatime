@@ -298,8 +298,140 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Инициализация для всех блоков квиза на странице
   document.querySelectorAll('.scenes-lesson-page').forEach(quiz => initScenesQuiz(quiz));
+
+  (function () {
+    const items = document.querySelectorAll('.theory__items .theory__item');
+    const totalItems = items.length;
+
+    items.forEach((item, index) => {
+      item.style.position = 'relative';
+      item.style.zIndex = totalItems - index;
+    });
+  })();
+
+  (function () {
+    const ehtResult = document.querySelector('.eht-result');
+
+    if (!ehtResult) return;
+
+    const circle = document.querySelector('.eht-result__diagramm-circle');
+    const valueDisplay = document.querySelector('.eht-result__diagramm-value');
+
+    // Вычисляем длину окружности: 2 * PI * r (r у нас 110)
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    // Задаем начальные значения SVG
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    // Функция для установки прогресса (принимает проценты от 0 до 100)
+    function setProgress(percent) {
+      const offset = circumference - (percent / 20) * circumference;
+      circle.style.strokeDashoffset = offset;
+      valueDisplay.textContent = `${Math.round(percent)}/20`;
+    }
+
+    setProgress(5);
+  })();
+
+  (function () {
+    const btnClass = 'general__filter-btn';
+    const activeClass = 'general__filter--active';
+
+    // Проверяем наличие хотя бы одной кнопки на странице. Если их нет — прерываем выполнение.
+    if (!document.querySelector(`.${btnClass}`)) return;
+
+    // 1. Обработка клика по кнопке (Тоггл эффект)
+    document.addEventListener('click', (event) => {
+      // Находим кнопку, даже если кликнули по иконке/тексту внутри неё
+      const btn = event.target.closest(`.${btnClass}`);
+
+      if (!btn) return;
+
+      // Находим непосредственного родителя кнопки
+      const parent = btn.parentElement;
+      if (!parent) return;
+
+      // Переключаем (тогблим) активный класс у родителя
+      parent.classList.toggle(activeClass);
+
+      // [Опционально] Закрываем все ОСТАЛЬНЫЕ открытые фильтры, кроме текущего
+      document.querySelectorAll(`.${activeClass}`).forEach((openFilter) => {
+        if (openFilter !== parent) {
+          openFilter.classList.remove(activeClass);
+        }
+      });
+    });
+
+    // 2. Закрытие при клике вне родительского контейнера
+    document.addEventListener('click', (event) => {
+      // Если кликнули по кнопке фильтра, этот клик обработается в первом блоке, тут ничего не делаем
+      if (event.target.closest(`.${btnClass}`)) return;
+
+      // Находим все открытые фильтры
+      const activeFilters = document.querySelectorAll(`.${activeClass}`);
+
+      activeFilters.forEach((filter) => {
+        // Если клик произошел вне текущего открытого фильтра — закрываем его
+        if (!filter.contains(event.target)) {
+          filter.classList.remove(activeClass);
+        }
+      });
+    });
+
+  })();
+
+  (function () {
+    const lessons = document.querySelector('.lessons');
+
+    if (!lessons) return;
+
+    const blocks = document.querySelectorAll('.lessons__block');
+    const heads = document.querySelectorAll('.lessons__head');
+    const activeClass = 'lessons__head--show';
+
+    if (!blocks.length || !heads.length) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20px 0px -99% 0px',
+      threshold: 0
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        const lessonId = entry.target.getAttribute('data-lesson');
+        if (!lessonId) return;
+
+        const associatedHead = document.querySelector(`.lessons__head[data-lesson="${lessonId}"]`);
+        if (!associatedHead) return;
+
+        if (entry.isIntersecting) {
+          // Гарантируем, что у других шапок класс уберется, а у текущей появится
+          heads.forEach(head => {
+            if (head !== associatedHead) head.classList.remove(activeClass);
+          });
+          associatedHead.classList.add(activeClass);
+        } else {
+          // Убираем класс только если мы скроллим ВВЕРХ (блок опустился ниже границы 20px)
+          // И при этом это НЕ первый блок, чтобы у первого заголовок оставался активным на самом верху страницы
+          if (entry.boundingClientRect.top > 20) {
+            const isFirstBlock = blocks[0] === entry.target;
+            if (!isFirstBlock) {
+              associatedHead.classList.remove(activeClass);
+            }
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    blocks.forEach(block => observer.observe(block));
+    
+  })();
 
   /**
    * Инициализация Fancybox

@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
   <!-- icons -->
-  <!-- <link rel="stylesheet" href="./icons/style.css"> -->
+  <link rel="stylesheet" href="./icons/style.css">
   <!-- styles -->
   <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
   <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
@@ -209,7 +209,7 @@
                       <h2 class="profile__title">Username22</h2>
                       <span>Регистрация: август 2022</span>
                     </div>
-                    <button class="btn">Редактировать</button>
+                    <a class="btn" href="/qazaqshatime/profile-edit.html">Редактировать</a>
                   </div>
                 </div>
                 <div class="achivments">
@@ -217,7 +217,7 @@
                     <h2 class="profile__title">Ваши достижения</h2>
                     <a class="achivments__header-all" href="#!">
                       <span>Все достижения</span>
-                      <i class="icon-"></i>
+                      <i class="icon-chevron-right-circle-inside"></i>
                     </a>
                   </div>
                   <ul class="achivments__list">
@@ -268,7 +268,7 @@
                     <span class="subscription__title">50 тенге в день</span>
                     <div class="subscription__actions">
                       <a class="subscription__change-tarif" href="#!">Сменить тариф</a>
-                      <button class="btn">отменить подписку</button>
+                      <button class="btn" data-fancybox href="#popup-subscribe">отменить подписку</button>
                     </div>
                   </div>
                 </div>
@@ -491,6 +491,28 @@
       <div class="popup__body">
         <button class="btn btn--green">
           На главную
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="popup-subscribe" class="popup popup--subscribe">
+  <div class="popup__wrap">
+
+    <div class="popup__content">
+      <div class="popup__head">
+        <div class="popup__title">
+          Вы уверены что хотите отменить подписку?
+        </div>
+      </div>
+      <div class="popup__body">
+        <button class="btn btn--green">
+          Да
+        </button>
+        <button class="btn">
+          Нет
         </button>
       </div>
     </div>

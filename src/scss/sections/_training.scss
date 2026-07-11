@@ -176,11 +176,34 @@
       &--success {
         --training-bg-color: var(--lime-green-20);
         --training-border-color: var(--lime-green);
+
+        .training__item-icon {
+
+          i {
+            font-size: 1.3rem;
+
+            &::before {
+              content: "\e909";
+            }
+          }
+        }
       }
 
       &--fail {
         --training-bg-color: var(--bright-orange-20);
         --training-border-color: var(--bright-orange);
+
+        .training__item-icon {
+
+          i {
+            border: 0.2rem dashed var(--training-border-color);
+            background: transparent;
+
+            &::before {
+              display: none;
+            }
+          }
+        }
       }
 
       &--lock {
@@ -213,6 +236,14 @@
       top: 1rem;
       left: 1rem;
       z-index: 1;
+
+      color: var(--white);
+
+      i {
+        --font-size: 2.4rem;
+
+        background-color: var(--training-border-color);
+      }
     }
 
     &-all {
@@ -235,7 +266,11 @@
       }
 
       .training__item-icon {
-        --font-size: 3.2rem;
+        position: static;
+
+        i {
+          --font-size: 3.2rem;
+        }
       }
     }
   }

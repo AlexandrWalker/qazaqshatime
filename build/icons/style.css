@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'qtIconFonts';
+  src:  url('fonts/qtIconFonts.eot?a94sk0');
+  src:  url('fonts/qtIconFonts.eot?a94sk0#iefix') format('embedded-opentype'),
+    url('fonts/qtIconFonts.ttf?a94sk0') format('truetype'),
+    url('fonts/qtIconFonts.woff?a94sk0') format('woff'),
+    url('fonts/qtIconFonts.svg?a94sk0#qtIconFonts') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'qtIconFonts' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bookmark:before {
+  content: "\e900";
+}
+.icon-books:before {
+  content: "\e901";
+}
+.icon-cap:before {
+  content: "\e902";
+}
+.icon-checkpoints:before {
+  content: "\e903";
+}
+.icon-chevron-right-circle-inside:before {
+  content: "\e904";
+}
+.icon-clock:before {
+  content: "\e905";
+}
+.icon-crown:before {
+  content: "\e906";
+}
+.icon-filter:before {
+  content: "\e907";
+}
+.icon-flame:before {
+  content: "\e908";
+}
+.icon-galochka:before {
+  content: "\e909";
+}
+.icon-galochka-circle:before {
+  content: "\e90a";
+}
+.icon-house:before {
+  content: "\e90b";
+}
+.icon-like-stroke:before {
+  content: "\e90c";
+}
+.icon-lock:before {
+  content: "\e90d";
+}
+.icon-medal:before {
+  content: "\e90e";
+}
+.icon-micro:before {
+  content: "\e90f";
+}
+.icon-microphone:before {
+  content: "\e910";
+}
+.icon-mix:before {
+  content: "\e911";
+}
+.icon-notebook:before {
+  content: "\e912";
+}
+.icon-play:before {
+  content: "\e913";
+}
+.icon-question-circle-wavy-inside:before {
+  content: "\e914";
+}
+.icon-star:before {
+  content: "\e915";
+}
+.icon-time:before {
+  content: "\e916";
+}
+.icon-triangle-down:before {
+  content: "\e917";
+}
+.icon-trophy:before {
+  content: "\e918";
+}
+.icon-volume:before {
+  content: "\e919";
+}
+.icon-watch:before {
+  content: "\e91a";
+}
+.icon-x-circle:before {
+  content: "\e91b";
+}

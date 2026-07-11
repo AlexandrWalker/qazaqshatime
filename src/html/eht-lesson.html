@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" class="main-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            <div class="general__content">
+
+              <div class="general__control">
+                <div class="general__back">
+                  <i class="icon-chevron-right-circle-inside"></i>
+                  Назад
+                </div>
+              </div>
+
+              <div class="eht">
+                <div class="eht__inner">
+                  <div class="eht__head">
+                    <div class="eht__head-progress">
+                      <progress value="4" max="20"></progress>
+                      <span>
+                        4 / 20
+                      </span>
+                    </div>
+                    <div class="eht__head-text">
+                      <i class="icon-time"></i>
+                      0:35
+                    </div>
+                  </div>
+                  <div class="eht__body">
+                    <div class="task__body">
+                      <div class="task__block">
+                        <div class="task__block-head">
+                          <div class="task__block-title">
+                            Как по-казахски «три»?
+                          </div>
+                        </div>
+                        <div class="task__block-body">
+                          <div class="task__choice">
+                            <div class="task__choice-item js-item js-item-active">
+                              <div class="task__choice-letter">
+                                <span>
+                                  А
+                                </span>
+                              </div>
+                              <div class="task__choice-text">
+                                Екі
+                              </div>
+                            </div>
+                            <div class="task__choice-item js-item">
+                              <div class="task__choice-letter">
+                                <span>
+                                  Б
+                                </span>
+                              </div>
+                              <div class="task__choice-text">
+                                Үш
+                              </div>
+                            </div>
+                            <div class="task__choice-item js-item">
+                              <div class="task__choice-letter">
+                                <span>
+                                  В
+                                </span>
+                              </div>
+                              <div class="task__choice-text">
+                                Төрт
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="task__control">
+                        <button class="btn btn--green">
+                          проверить
+                        </button>
+                        <button class="btn js-next-btn">
+                          Далее
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar-rating.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

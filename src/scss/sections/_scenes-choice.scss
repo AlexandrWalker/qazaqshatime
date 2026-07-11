@@ -95,16 +95,28 @@
     }
 
     &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
       background-color: var(--bright-orange);
 
       color: var(--white);
+
+      i {
+        --font-size: 3.2rem;
+      }
     }
 
     &-icon {
-      --font-size: 3.2rem;
+      height: 4rem;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
     }
 
     &-time {

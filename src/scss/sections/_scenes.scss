@@ -14,12 +14,12 @@
     &__item {
 
       &-head {
+        border-radius: 1.5rem;
 
         @include sm {
           display: grid;
           grid-template-rows: 1fr auto;
           gap: 0.7rem 1.5rem;
-          border-radius: 1.5rem;
           padding: 0.5rem;
         }
       }
@@ -74,7 +74,7 @@
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 1rem 2rem;
     }
 
     &-item {
@@ -184,6 +184,17 @@
       --item-border-color: var(--lime-green);
 
       opacity: 1;
+
+      .scenes__block-check {
+
+        i {
+          font-size: 1.3rem;
+
+          &::before {
+            content: "\e909";
+          }
+        }
+      }
     }
 
     &--fail {
@@ -191,6 +202,18 @@
       --item-border-color: var(--bright-orange);
 
       opacity: 1;
+
+      .scenes__block-check {
+
+        i {
+          border: 0.2rem dashed var(--item-border-color);
+          background: transparent;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
     }
 
     &--lock {
@@ -211,12 +234,11 @@
 
 
       i {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 2.4rem;
-        height: 2.4rem;
-        border-radius: 50%;
+        --font-size: 2.4rem;
+
+        background-color: var(--item-border-color);
+
+        color: var(--white);
       }
 
       span {
@@ -299,7 +321,7 @@
 
     &.passed::before {
       width: 100%;
-      background-color: var(--dark-magenta);
+      background-color: var(--lime-green);
     }
 
     &::before {

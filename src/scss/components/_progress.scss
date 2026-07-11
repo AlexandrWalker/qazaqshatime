@@ -325,6 +325,8 @@
 
       i {
         --font-size: 3.2rem;
+
+        color: var(--bright-orange);
       }
     }
   }
@@ -367,6 +369,8 @@
 
         i {
           opacity: 1 !important;
+
+          color: var(--lime-green);
         }
       }
 
@@ -381,7 +385,14 @@
         }
 
         i {
+          --font-size: 1.6rem;
+          border: 0.2rem dashed var(--progress-list-dot);
+
           opacity: 1 !important;
+
+          &::before {
+            display: none;
+          }
         }
       }
 
@@ -407,6 +418,9 @@
 
       i {
         --font-size: 1.3rem;
+        
+        width: 1.6rem;
+        height: 1.6rem;
 
         opacity: 0;
       }

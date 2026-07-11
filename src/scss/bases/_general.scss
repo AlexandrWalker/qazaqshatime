@@ -195,31 +195,112 @@
 
     i {
       font-size: 2.6rem;
+      transform: scale(-1, 1);
     }
   }
 
   &__filter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    background-color: var(--white);
-    box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
+    position: relative;
+    z-index: 101;
 
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 110%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--blue);
+    &-btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      background-color: var(--white);
+      overflow: hidden;
+      box-shadow: 0px 4px 15px rgba(94, 58, 67, 0.15);
 
-    i {
-      --font-size: 3.2rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 110%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--blue);
+
+      .general__filter--active & {
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 0px -8px 15px rgba(94, 58, 67, 0.15);
+      }
+
+      i {
+        --font-size: 3.2rem;
+      }
     }
 
+    &-body {
+      display: grid;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      background-color: var(--white);
+      border-radius: 1rem;
+      width: calc(100vw/(1440/820));
 
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+
+      @include sm {
+        width: var(--container-width);
+
+        right: 0;
+        left: unset;
+      }
+
+      .general__filter--active & {
+        border-radius: 0 1rem 1rem 1rem;
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0px 10px 10px rgba(94, 58, 67, 0.15);
+
+        @include sm {
+          border-radius: 1rem 0 1rem 1rem;
+        }
+      }
+    }
+
+    &-content {
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+    }
+
+    &-item {
+      --filter-item-color: var(--blue);
+
+      .form-radio-label {
+        gap: 1rem;
+      }
+
+      .form-radio-input:checked+.form-radio-item::before {
+        background-color: var(--filter-item-color);
+      }
+
+      .form-radio-item::before {
+        background-color: transparent;
+      }
+
+      .form-radio-text {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        color: var(--filter-item-color) !important;
+      }
+    }
   }
 
   &__scenes {

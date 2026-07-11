@@ -84,6 +84,40 @@
     }
   }
 
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn {
+      font-size: 1.6rem;
+
+      @include sm {
+        --btn-padding-x: 1rem;
+
+        width: 100%;
+        gap: 1rem;
+
+        font-size: 1.4rem;
+      }
+
+      i {
+        --font-size: 2.4rem;
+
+        @include sm {
+          --font-size: 2rem;
+        }
+      }
+    }
+  }
+
   &__items {
     display: flex;
     flex-direction: column;
@@ -140,6 +174,12 @@
 
       position: relative;
       z-index: 2;
+
+      @include sm {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
     }
 
     &-count {
@@ -237,6 +277,8 @@
 
         i {
           --font-size: 1.3rem;
+
+          color: var(--lime-green);
         }
       }
     }
@@ -259,6 +301,11 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 1.5rem;
+
+      @include sm {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem;
+      }
     }
 
     &-block {
@@ -283,6 +330,17 @@
         --item-icon-color: var(--lime-green);
 
         opacity: 1;
+
+        .exercises__item-block--check {
+
+          i {
+            font-size: 1.3rem;
+
+            &::before {
+              content: "\e909";
+            }
+          }
+        }
       }
 
       &--fail {
@@ -291,6 +349,15 @@
         --item-icon-color: var(--bright-orange);
 
         opacity: 1;
+
+        .exercises__item-block--check i {
+          border: 0.2rem dashed var(--item-icon-color);
+          background: transparent;
+
+          &::before {
+            display: none;
+          }
+        }
       }
 
       &--check {
@@ -300,14 +367,10 @@
         gap: 0.7rem;
 
         i {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 2.4rem;
-          height: 2.4rem;
-          border-radius: 50%;
+          --font-size: 2.4rem;
+
+          color: var(--white);
           background-color: var(--item-icon-color);
-          flex-shrink: 0;
         }
 
         span {
@@ -351,16 +414,11 @@
       padding: 1.2rem 0;
 
       i {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 2.4rem;
-        height: 2.4rem;
-        border-radius: 50%;
-        flex-shrink: 0;
+        --font-size: 2.4rem;
 
         color: var(--white-40);
+
+        background-color: var(--medium-gray);
       }
 
       span {
@@ -388,6 +446,12 @@
     border: 0.2rem solid var(--checkpoint-border-color);
     background-color: var(--checkpoint-bg-color);
 
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+
     &--success {
       --checkpoint-color: var(--blue);
       --checkpoint-bg-color: var(--lime-green-20);
@@ -410,6 +474,10 @@
       border-radius: 1rem;
       flex-shrink: 0;
 
+      @include sm {
+        width: 100%;
+      }
+
       img {
         width: auto;
         height: 7rem;
@@ -430,6 +498,10 @@
       line-height: 120%;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+
+      @include sm {
+        font-size: 1.2rem;
+      }
     }
 
     &-title {
@@ -438,6 +510,10 @@
       font-size: 2.4rem;
       line-height: 120%;
       color: var(--checkpoint-color);
+
+      @include sm {
+        font-size: 1.6rem;
+      }
     }
 
     &-text {
@@ -447,14 +523,11 @@
       gap: 1rem;
 
       i {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 2.4rem;
-        height: 2.4rem;
-        border-radius: 50%;
+        --font-size: 2.4rem;
+
         background-color: var(--checkpoint-icon-bg-color);
-        flex-shrink: 0;
+
+        color: var(--white);
       }
 
       span {
@@ -465,6 +538,11 @@
       }
     }
 
-    &-btn {}
+    &-btn {
+
+      @include sm {
+        width: 100%;
+      }
+    }
   }
 }

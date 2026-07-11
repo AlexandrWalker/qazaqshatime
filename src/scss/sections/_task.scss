@@ -331,9 +331,11 @@
       display: flex;
       align-items: center;
       width: 100%;
+      height: 4rem;
 
-      i {
-        --font-size: 4rem;
+      img {
+        height: 100%;
+        object-fit: contain;
       }
     }
 
@@ -792,6 +794,13 @@
     &-right {
       flex-direction: row-reverse;
     }
+
+    &-left {
+
+      i {
+        transform: scale(-1, 1);
+      }
+    }
   }
 
   &__order {
@@ -906,6 +915,7 @@
 
           .task__dialogue & {
             padding-right: 4.7rem;
+            padding-left: 1rem;
           }
         }
       }
@@ -1057,6 +1067,8 @@
 
       i {
         --font-size: 2.4rem;
+
+        color: var(--white);
       }
     }
   }
@@ -1226,6 +1238,8 @@
 
       i {
         --font-size: 3.2rem;
+
+        color: var(--white);
       }
     }
   }
@@ -1337,6 +1351,8 @@
 
       i {
         --font-size: 2.4rem;
+
+        color: var(--dark-magenta);
       }
 
       &--text {

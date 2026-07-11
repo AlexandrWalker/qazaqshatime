@@ -15,6 +15,16 @@
     padding: 3rem 2rem;
   }
 
+  &-page {
+
+    .sidebar {
+      
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
   h1.profile__title {
     font-family: var(--second-family);
     font-weight: 700;
@@ -43,6 +53,14 @@
     &-col {
       display: grid;
       gap: 2rem;
+      height: fit-content;
+
+      &:nth-child(2) {
+
+        @include dosm {
+          padding-top: 3rem;
+        }
+      }
 
       .btn {
         width: 100%;

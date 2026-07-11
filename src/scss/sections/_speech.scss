@@ -1,43 +1,52 @@
 @use './../mixins' as *;
 
 .speech {
-  .scenes__block-img{
+  .scenes__block-img {
     height: 6.5rem;
     margin-bottom: 1.5rem;
   }
+
   .exercises__item-block:not(.exercises__item-block--fail, .exercises__item-block--success) .scenes__block-img {
     filter: grayscale(100%);
   }
-  .exercises__item-blocks{
+
+  .exercises__item-blocks {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 16.5rem));
+
     @include sm {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
   }
-  .exercises__item-head{
+
+  .exercises__item-head {
     @include sm {
       padding-right: 1rem;
       padding-bottom: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
   }
-  .exercises__item-wrap{
+
+  .exercises__item-wrap {
     @include sm {
       width: auto;
     }
   }
-  .exercises__item-progress{
-    @include sm {
+
+  .exercises__item-progress {
+    @include dosm {
       margin-left: auto;
     }
   }
-  .exercises__item-title{
+
+  .exercises__item-title {
     @include sm {
       font-size: 1.6rem;
     }
   }
-  .exercises__item-block--fail{
-    .exercises__item-block--check i{
+
+  .exercises__item-block--fail {
+    .exercises__item-block--check i {
       background-color: transparent;
       border: 0.2rem dashed var(--item-icon-color);
     }

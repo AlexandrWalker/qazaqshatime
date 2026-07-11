@@ -239,8 +239,10 @@ gulp.task('otfToTtf', () => {
 });
 
 gulp.task('ttfToWoff', () => {
+  const ttfSrc = [`${srcFolder}fonts/*.ttf`, `!${srcFolder}fonts/icons/**/*`];
+
   return gulp
-    .src(`${srcFolder}fonts/*.ttf`, { encoding: false })
+    .src(ttfSrc, { encoding: false })
     .pipe(
       plumber(
         notify.onError({
@@ -251,7 +253,7 @@ gulp.task('ttfToWoff', () => {
     )
     .pipe(ttf2woff())
     .pipe(gulp.dest(`${destFolder}fonts/`))
-    .pipe(gulp.src(`${srcFolder}fonts/*.ttf`, { encoding: false }))
+    .pipe(gulp.src(ttfSrc, { encoding: false }))
     .pipe(ttf2woff2())
     .pipe(gulp.dest(`${destFolder}fonts/`));
 });
@@ -264,6 +266,11 @@ gulp.task('fontsStyle', () => {
       fs.writeFile(fontsFile, '', cb);
       let newFileOnly;
       for (var i = 0; i < fontsFiles.length; i++) {
+
+        if (fontsFiles[i] === 'icons' || fontsFiles[i].includes('icons')) {
+          continue;
+        }
+
         let fontFileName = fontsFiles[i].split('.')[0];
         if (newFileOnly !== fontFileName) {
           let fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
@@ -302,9 +309,15 @@ gulp.task('fontsStyle', () => {
   function cb() { }
 });
 
+gulp.task('copyIcons', function () {
+  return gulp
+    .src(`${srcFolder}files/icons/**/*`, { encoding: false })
+    .pipe(gulp.dest(`${destFolder}icons/`));
+});
+
 gulp.task('files', function () {
   return gulp
-    .src([`${srcFolder}files/**/*.*`])
+    .src([`${srcFolder}files/**/*.*`, `!${srcFolder}files/icons/**/*`]) 
     .pipe(gulp.dest(`${destFolder}`))
     .pipe(browserSync.stream());
 });
@@ -336,7 +349,7 @@ gulp.task('watch', function () {
   gulp.watch(`${srcFolder}files/**/*`, gulp.parallel('files'));
 });
 
-gulp.task('fonts', gulp.series('otfToTtf', 'ttfToWoff', 'fontsStyle'));
+gulp.task('fonts', gulp.series('otfToTtf', 'ttfToWoff', 'copyIcons', 'fontsStyle'));
 
 gulp.task(
   'default',

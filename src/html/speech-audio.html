@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru" class="task-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+            @@include('./blocks/general__tabs.html')
+            @@include('./blocks/general__lesson.html')
+            <div class="general__content">
+              @@include('./blocks/general__scenes.html')
+              <div class="general__control">
+                <div class="general__back">
+                  <i class="icon-chevron-right-circle-inside"></i>
+                  Назад
+                </div>
+              </div>
+
+              <div class="task">
+                <div class="task__inner">
+                  <div class="task__head">
+                    <div class="task__head-title">
+                      У12 · Сағат неше? — Который час?
+                    </div>
+                    <div class="task__head-text">
+                      Упражнение <span class="current-step">1</span> из <span class="total-steps">4</span>
+                    </div>
+                    <div class="task__progress">
+                      <div class="task__segment current"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                      <div class="task__segment"></div>
+                    </div>
+                  </div>
+                  <div class="task__body">
+                    <div class="task__block">
+                      <div class="task__block-head">
+                        <div class="task__block-title">
+                          Послушайте аудио и выберите правильное значение
+                        </div>
+                        <div class="task__block-text">
+                          Нажми на кнопку воспроизведения, можно замедлить до 0.75x
+                        </div>
+                      </div>
+                      <div class="task__block-body">
+
+                        <div class="task__listen">
+                          <div class="task__recognition">
+                            <div class="task__recognition-item">
+                              <div class="task__recognition-icon">
+                                <i class="icon-play"></i>
+                              </div>
+                              <div class="task__recognition-block">
+                                <img src="./../images/icon/audio-wave.svg" alt="">
+                              </div>
+                              <div class="task__recognition-wrap">
+                                <div class="task__recognition-time">
+                                  0:08
+                                </div>
+                                <div class="task__recognition-speed">
+                                  <span>
+                                    0.75x
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="task__choice">
+                          <div class="task__choice-item js-item">
+                            <div class="task__choice-letter">
+                              <span>
+                                А
+                              </span>
+                            </div>
+                            <div class="task__choice-text">
+                              Сағат үш.
+                            </div>
+                          </div>
+                          <div class="task__choice-item js-item">
+                            <div class="task__choice-letter">
+                              <span>
+                                Б
+                              </span>
+                            </div>
+                            <div class="task__choice-text">
+                              Сағат жарым төрт.
+                            </div>
+                          </div>
+                          <div class="task__choice-item js-item">
+                            <div class="task__choice-letter">
+                              <span>
+                                В
+                              </span>
+                            </div>
+                            <div class="task__choice-text">
+                              Сағат бес.
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="task__control">
+                      <button class="btn btn--green">
+                        проверить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            @@include('./blocks/sidebar.html')
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

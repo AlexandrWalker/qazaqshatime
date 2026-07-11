@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" class="eht-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            <div class="general__content">
+
+              <div class="general__control">
+                <div class="general__back">
+                  <i class="icon-chevron-right-circle-inside"></i>
+                  Назад
+                </div>
+              </div>
+
+              <div class="eht-result">
+                <div class="eht-result__head">
+                  <div class="eht-result__title">
+                    Результаты теста
+                  </div>
+                </div>
+                <div class="eht-result__body">
+                  <div class="eht-result__diagramm">
+                    <svg class="eht-result__diagramm-ring" width="240" height="240">
+                      <!-- Серый круг-фон -->
+                      <circle class="eht-result__diagramm-background" stroke="#636463" stroke-width="12" fill="transparent"
+                        r="110" cx="120" cy="120" />
+                      <!-- Цветной круг-прогресс -->
+                      <circle class="eht-result__diagramm-circle" stroke="#B4D335" stroke-width="12" fill="transparent" r="110"
+                        cx="120" cy="120" />
+                    </svg>
+                    <!-- Текст с процентами внутри -->
+                    <span class="eht-result__diagramm-value">8/20</span>
+                  </div>
+                  <div class="eht-result__diagramm-wrap">
+                    <div class="eht-result__diagramm-text">
+                      Вопросов всего: <span>20</span>
+                    </div>
+                    <div class="eht-result__diagramm-text eht-result__success">
+                      Правильных ответов: <span>8</span>
+                    </div>
+                    <div class="eht-result__diagramm-text eht-result__fail">
+                      Неправильных: <span>3</span>
+                    </div>
+                    <div class="eht-result__diagramm-text eht-result__passed">
+                      Неотмеченных: <span>9</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="eht-result__foot">
+                  <button class="btn">
+                    пройти заново
+                  </button>
+                  <button class="btn btn--green">
+                    закрыть
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar-rating.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')
