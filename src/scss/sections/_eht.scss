@@ -129,11 +129,15 @@
     justify-content: start;
 
     border-radius: 1.5rem;
-    box-shadow: 0 4px 15px 0 rgba(94, 58, 67, 0.15);
+    box-shadow: 0 0.4rem 1.5rem 0 rgba(94, 58, 67, 0.15);
     background: #fff;
 
     @include sm {
       min-height: 20rem;
+    }
+
+    &:hover{
+      box-shadow: 0 0.4rem 1.5rem 0 #b4d335;
     }
 
     img {

@@ -29,6 +29,10 @@
       grid-column: 7/9;
     }
 
+    &:hover{
+      background-color: #1d2d8c;
+    }
+
     &-head {
       display: flex;
       flex-direction: row;
@@ -192,6 +196,10 @@
     font-size: 1.4rem;
     line-height: 110%;
     color: var(--blue);
+
+    &:hover{
+      color: #636363;
+    }
 
     i {
       font-size: 2.6rem;

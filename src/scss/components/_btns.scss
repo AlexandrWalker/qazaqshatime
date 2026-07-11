@@ -49,7 +49,9 @@
   }
 
   &:hover {
-
+    border-color: #1d2d8c;
+    background-color: #1d2d8c;
+    color: #fff;
     @include dosm {}
   }
 

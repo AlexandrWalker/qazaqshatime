@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru" class="main-page">
+@@include('blocks/head.html', {"title": "Qazaqshatime"})
+
+<body>
+  <div class="wrapper">
+    <!-- Шапка -->
+    @@include('./blocks/header-login.html')
+    <main class="main">
+
+      <section class="general">
+        <div class="container">
+          <div class="general__inner">
+
+            @@include('./blocks/general__tabs.html')
+
+            @@include('./blocks/general__lesson.html')
+
+            <div class="general__content">
+
+              <div class="vocabulary-save">
+                <div class="vocabulary__tabs">
+                  <a class="vocabulary__tabs-btn" href="#!">Азбука</a>
+                  <a class="vocabulary__tabs-btn _active" href="#!">Сохранённые слова и фразы</a>
+                </div>
+
+                <div class="vocabulary-save__header">
+                  <button class="btn">
+                    <i class="icon-mix"></i>
+                    <span>Перемешать</span>
+                  </button>
+                  <div class="btn vocabulary-save__header-checkbox">
+                    <span>Қаз</span>
+                    <div class="form-group">
+                      <label class="form-checkbox-label">
+                        <input class="form-checkbox-input" type="checkbox" hidden>
+                        <div class="form-checkbox-item"></div>
+                      </label>
+                    </div>
+                    <span>Рус</span>
+                  </div>
+                </div>
+
+                <div class="scenes__level">
+                    <div class="scenes__level-title">
+                      Уровень:
+                    </div>
+                    <div class="scenes__level-items">
+                      <div class="scenes__level-item">
+                        <div class="form-radio">
+                          <label class="form-radio-label">
+                            <input class="form-radio-input" name="speech_lvl" type="radio" checked>
+                            <div class="form-radio-item"></div>
+                            <div class="form-radio-text">
+                              Начальный
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="scenes__level-item">
+                        <div class="form-radio">
+                          <label class="form-radio-label">
+                            <input class="form-radio-input" name="speech_lvl" type="radio">
+                            <div class="form-radio-item"></div>
+                            <div class="form-radio-text">
+                              Средний
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="scenes__level-item">
+                        <div class="form-radio">
+                          <label class="form-radio-label">
+                            <input class="form-radio-input" name="speech_lvl" type="radio">
+                            <div class="form-radio-item"></div>
+                            <div class="form-radio-text">
+                              Продвинутый
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="vocabulary-save__items">
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                  <div class="vocabulary-save__item">
+                    <span class="vocabulary-save__item-title">Кітап</span>
+                    <img src="./../images/temp/play-orange.svg" alt="play">
+                    <div class="vocabulary-save__item vocabulary-save__item-hover">
+                      <span class="vocabulary-save__item-title">Книга</span>
+                      <span class="vocabulary-save__item-subtitle">[к’ітап]</span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+
+            @@include('./blocks/sidebar.html')
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Подвал -->
+    @@include('blocks/footer.html')

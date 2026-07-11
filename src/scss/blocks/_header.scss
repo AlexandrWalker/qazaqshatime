@@ -132,5 +132,18 @@
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 120%;
+
+    &:hover{
+      color: #636363;
+      .header__item-icon{
+        filter: grayscale(1);
+      }
+    }
+
+    .icon-triangle-down{
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+    }
   }
 }

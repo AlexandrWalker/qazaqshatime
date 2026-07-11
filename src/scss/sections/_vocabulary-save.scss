@@ -1,0 +1,118 @@
+@use './../mixins' as *;
+
+.vocabulary-save{
+  display: grid;
+  gap: 3rem;
+  &__header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    @include sm {
+      flex-direction: column;
+    }
+    .btn{
+      @include sm {
+        width: 100%;
+      }
+    }
+    &-checkbox{
+      &:hover{
+        background-color: var(--btn-background);
+        color:#1d2d8c
+      }
+    }
+
+    .form-checkbox-item{
+      width: 5.4rem;
+      height: 3.4rem;
+
+      background-color: #fff;
+      box-shadow: 0 4px 15px 0 rgba(94, 58, 67, 0.15);
+    }
+    .form-checkbox-item::before{
+      width: 1.6rem;
+      height: 1.6rem;
+
+      left: 0.9rem;
+      right: auto;
+      background-color: #1d2d8c;
+    }
+    .form-checkbox-input:checked + .form-checkbox-item{
+      background-color: #1d2d8c;
+    }
+    .form-checkbox-input:checked + .form-checkbox-item::before {
+      transform: translateY(-50%) translateX(1.8rem);
+      background-color: #fff;
+    }
+    .form-radio-input:checked + .form-radio-item + .form-radio-text {
+      color: var(--blue); 
+    }
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item{
+    position: relative;
+
+    width: 100%;
+    min-height: 15rem;
+    padding: 3rem 2.5rem 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1.4rem;
+
+    border-radius: 2rem;
+    box-shadow: 0 0.4rem 1.5rem 0 rgba(94, 58, 67, 0.15);
+    background: #fff;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 120%;
+
+    &:hover{
+      .vocabulary-save__item-hover{
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    &-title{
+      color: #1d2d8c;
+    }
+    img{
+      width: 5rem;
+      height: auto;
+    }
+    &-hover{
+      position: absolute;
+      inset: 0;
+
+      gap: 3rem;
+
+      opacity: 0;
+      pointer-events: none;
+      background-color: #1d2d8c;
+
+
+      color: #fff;
+      .vocabulary-save__item-title{
+        color: #fff;
+      }
+      .vocabulary-save__item-subtitle{
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 120%;
+        text-align: center;
+      }
+    }
+  }
+}
