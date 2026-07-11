@@ -233,6 +233,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.task').forEach(quiz => initQuizProgress(quiz));
 
+  function initScenesQuiz(quizElement) {
+    const segments = quizElement.querySelectorAll('.scenes__segment');
+    const nextBtn = quizElement.querySelector('.btn--green'); // Кнопка «проверить / далее»
+    const taskBody = quizElement.querySelector('.scenes-inner__body');
+
+    // === ЛОГИКА ВЫБОРА ВАРИАНТА (Один активный с возможностью отмены) ===
+    if (taskBody) {
+      taskBody.addEventListener('click', (e) => {
+        // Ищем клик по элементу выбора с нужным JS-классом
+        const clickedItem = e.target.closest('.scenes-item-js');
+        if (!clickedItem) return;
+
+        // Если кликнули по уже активному — снимаем класс (toggle)
+        if (clickedItem.classList.contains('scenes-item-js--active')) {
+          clickedItem.classList.remove('scenes-item-js--active');
+          return;
+        }
+
+        // Иначе находим прошлый активный элемент в этом блоке и сбрасываем его
+        const activeItem = taskBody.querySelector('.scenes-item-js--active');
+        if (activeItem) {
+          activeItem.classList.remove('scenes-item-js--active');
+        }
+
+        // Активируем текущий
+        clickedItem.classList.add('scenes-item-js--active');
+      });
+    }
+
+    // === ЛОГИКА ПРОГРЕСС-БАРА И ПЕРЕКЛЮЧЕНИЯ ШАГОВ ===
+    if (!nextBtn || segments.length === 0) return;
+
+    let currentStep = 1;
+    const totalSteps = segments.length;
+
+    nextBtn.addEventListener('click', (e) => {
+      // Предотвращаем переход по ссылке, если это тег <a>
+      e.preventDefault();
+
+      if (currentStep < totalSteps) {
+        // Меняем состояние сегментов прогресса
+        segments[currentStep - 1].classList.remove('current');
+        segments[currentStep - 1].classList.add('passed');
+        segments[currentStep].classList.add('current');
+
+        currentStep++;
+
+        // Полный сброс стилей выбора при переходе на следующий шаг
+        if (taskBody) {
+          taskBody.querySelectorAll('.scenes-item-js').forEach(item => {
+            item.classList.remove('scenes-item-js--active');
+          });
+        }
+
+      } else if (currentStep === totalSteps) {
+        // Финальный шаг
+        segments[currentStep - 1].classList.remove('current');
+        segments[currentStep - 1].classList.add('passed');
+
+        nextBtn.textContent = 'Готово!';
+        nextBtn.style.pointerEvents = 'none'; // Отключаем кликабельность ссылки
+      }
+    });
+  }
+
+  // Инициализация для всех блоков квиза на странице
+  document.querySelectorAll('.scenes-lesson-page').forEach(quiz => initScenesQuiz(quiz));
 
   /**
    * Инициализация Fancybox
