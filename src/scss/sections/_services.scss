@@ -77,6 +77,22 @@
 
       .services__item-text {
         color: var(--white-75);
+
+        padding-right: 4.5rem;
+      }
+
+      .services__item-icon {
+        width: 3.2rem;
+        height: 3.2rem;
+
+        top: unset;
+        right: 4rem;
+        bottom: 3.7rem;
+        left: unset;
+
+        i {
+          --font-size: 3.2rem;
+        }
       }
     }
 

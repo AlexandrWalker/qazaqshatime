@@ -5,7 +5,15 @@
 
   @include dosm {
     grid-column: 7/9;
+    grid-row: 2/4;
     margin-bottom: 19.5rem;
+  }
+
+  .general--2 & {
+
+    @include dosm {
+      grid-row: 1/4;
+    }
   }
 
   &__inner {
@@ -18,7 +26,7 @@
     }
   }
 
-  .sidebar-rating{
+  .sidebar-rating {
     padding: 3rem 0.6rem 4rem 1.5rem;
 
     border-radius: 2rem;
@@ -26,7 +34,7 @@
 
     color: var(--white);
 
-    &__title{
+    &__title {
       width: 100%;
       margin-bottom: 2.1rem;
 
@@ -37,7 +45,7 @@
       text-align: center;
     }
 
-    &__items{
+    &__items {
       max-height: 54.5rem;
       padding-right: 1rem;
 
@@ -50,16 +58,18 @@
       &::-webkit-scrollbar {
         width: 0.4rem;
       }
+
       &::-webkit-scrollbar-track {
         background: transparent;
       }
+
       &::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 0.8rem;
       }
     }
 
-    &__item{
+    &__item {
       padding: 1.1rem 0.7rem 1.1rem 1.2rem;
 
       border: 0.2rem solid rgba(255, 255, 255, 0.2);
@@ -73,49 +83,54 @@
       font-weight: 500;
       font-size: 1.4rem;
       line-height: 120%;
-      color: #fff;
+      color: var(--white);
 
-      &:hover{
+      &:hover {
         background-color: rgba(255, 255, 255, 0.2);
       }
 
-      .user{
+      .user {
         display: flex;
         align-items: center;
         gap: 0.8rem;
       }
 
-      .score{
+      .score {
         display: flex;
         align-items: center;
         gap: 0.5rem;
       }
 
-      img{
+      img {
         max-width: 2.4rem;
       }
 
-      &:nth-child(1){
+      &:nth-child(1) {
         border-color: #fccd05;
-        .count{
+
+        .count {
           color: #fccd05;
         }
       }
-      &:nth-child(2){
+
+      &:nth-child(2) {
         border-color: #ccc;
-        .count{
+
+        .count {
           color: #ccc;
         }
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         border-color: #e3672a;
-        .count{
+
+        .count {
           color: #e3672a;
         }
       }
     }
 
-    &__item-scores{
+    &__item-scores {
       margin-left: auto;
 
       display: flex;
@@ -124,22 +139,24 @@
     }
   }
 
-  .sidebar-results{
+  .sidebar-results {
     padding: 2rem 2rem 3rem 2rem;
 
     display: flex;
     flex-direction: column;
     gap: 3rem;
 
-    background-color: #fff;
+    background-color: var(--white);
     border: 0.1rem solid #F8F9FE;
     border-radius: 2rem;
 
-    &__btns{
+    &__btns {
       display: flex;
       gap: 1rem;
 
-      .btn{
+      .btn {
+        --btn-color: var(--black);
+
         width: auto;
         padding: 2.1rem 1.1rem 2rem;
 
@@ -151,29 +168,29 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         text-align: center;
-        color: #000;
 
         flex-grow: 1;
-        &._active{
+
+        &._active {
           border-color: #b4d335;
           background: rgba(180, 211, 53, 0.2);
         }
       }
     }
 
-    &__ach{
+    &__ach {
       display: flex;
       flex-direction: column;
       gap: 3rem;
     }
 
-    &__progress{
+    &__progress {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
 
-      &-item{
+      &-item {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -186,18 +203,18 @@
         text-transform: uppercase;
         color: #000;
 
-        img{
+        img {
           max-width: 3.2rem;
         }
       }
     }
 
-    &__items{
+    &__items {
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
-      
-      .sidebar-results__item{
+
+      .sidebar-results__item {
         display: flex;
         justify-content: start;
         align-items: center;
@@ -208,14 +225,14 @@
         line-height: 200%;
         color: #636463;
 
-        img{
+        img {
           max-width: 2.4rem;
         }
       }
     }
   }
 
-  .checkpoint{
+  .checkpoint {
     padding: 3rem;
     border-radius: 2rem;
     background-color: #1d2d8c;
@@ -223,8 +240,8 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
-    &__header{
+
+    &__header {
       display: flex;
       justify-content: space-between;
       align-items: start;
@@ -232,19 +249,19 @@
       font-weight: 700;
       font-size: 2.2rem;
       line-height: 120%;
-      color: #fff;
+      color: var(--white);
 
-      img{
+      img {
         width: 4.9rem;
         height: 5.2rem;
       }
     }
 
-    &__descr{
+    &__descr {
       font-weight: 500;
       font-size: 1.4rem;
       line-height: 110%;
-      color: #fff;
+      color: var(--white);
     }
   }
 }

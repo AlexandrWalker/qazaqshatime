@@ -5,6 +5,10 @@
   width: auto;
   height: 4.2rem;
 
+  @include sm {
+    height: 3.2rem;
+  }
+
   img {
     width: auto;
     height: 100%;

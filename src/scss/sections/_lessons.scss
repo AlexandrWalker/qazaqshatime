@@ -187,6 +187,10 @@
               margin-left: 20.9rem;
             }
           }
+
+          &-block i {
+            color: var(--midnight-blue);
+          }
         }
       }
     }
@@ -361,7 +365,7 @@
       gap: 0.6rem;
       padding: 1.7rem 4.6rem 1.2rem 4.6rem;
       border-radius: 10rem;
-      background-color: var(--deep-blue);
+      background-color: var(--midnight-blue);
 
       text-align: center;
 

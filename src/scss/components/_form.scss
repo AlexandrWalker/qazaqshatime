@@ -107,6 +107,7 @@
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 150%;
+    color: var(--medium-gray);
   }
 
   &-textarea {
@@ -159,7 +160,7 @@
           }
 
           &+.form-radio-text {
-            color: var(--black);
+            // color: var(--black);
           }
         }
       }

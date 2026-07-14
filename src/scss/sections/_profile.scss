@@ -15,16 +15,6 @@
     padding: 3rem 2rem;
   }
 
-  &-page {
-
-    .sidebar {
-      
-      @include sm {
-        display: none;
-      }
-    }
-  }
-
   h1.profile__title {
     font-family: var(--second-family);
     font-weight: 700;
@@ -125,7 +115,14 @@
       font-weight: 500;
       font-size: 1.4rem;
       line-height: 110%;
-      color: #1D2D8C;
+      color: var(--blue);
+
+      i {
+
+        &:not(.profile-page .achivments__header-all i) {
+          transform: scale(-1, 1);
+        }
+      }
     }
   }
 

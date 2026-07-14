@@ -23,6 +23,17 @@
     &--lock {
       pointer-events: none;
       opacity: 0.4;
+
+      .levels__item-btn {
+        --btn-border-color: var(--medium-gray);
+        --btn-color: var(--medium-gray);
+
+        i {
+          background-color: var(--medium-gray);
+
+          color: var(--white);
+        }
+      }
     }
 
     &--beginner {

@@ -130,30 +130,42 @@
 
     border-radius: 1.5rem;
     box-shadow: 0 0.4rem 1.5rem 0 rgba(94, 58, 67, 0.15);
-    background: #fff;
+    background: var(--white);
 
     @include sm {
       min-height: 20rem;
     }
 
-    &:hover{
+    &:hover {
       box-shadow: 0 0.4rem 1.5rem 0 #b4d335;
     }
 
     img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 18rem;
+      object-fit: contain;
+      flex-shrink: 0;
+
+      @include sm {
+        height: 12rem;
+      }
     }
 
     &-title {
-      margin: 2rem 0.5rem;
+      margin: 1.7rem 0.5rem;
 
       font-weight: 700;
       font-size: 1.6rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       text-align: center;
-      color: #1d2d8c;
+      color: var(--blue);
+
+      @include sm {
+        margin: 1.5rem 1rem;
+
+        font-size: 1.4rem;
+      }
     }
   }
 }
@@ -322,7 +334,7 @@
   &__fail {
 
     span {
-      color: var(--red);
+      color: var(--crimson-red);
     }
   }
 

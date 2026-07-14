@@ -15,7 +15,9 @@
 
     @include sm {
       flex-direction: column-reverse;
-      gap: 5rem;
+      gap: 1rem;
+      padding: 1.5rem 2rem 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .header-login & {
@@ -27,6 +29,7 @@
         padding: 2.4rem 0 2.4rem;
         background: unset;
         box-shadow: unset;
+        margin-bottom: 0;
       }
     }
   }
@@ -97,6 +100,8 @@
     align-items: center;
     gap: 5.6rem;
 
+    color: var(--blue);
+
     @include sm {
       justify-content: space-between;
       gap: 1rem;
@@ -133,14 +138,15 @@
     font-size: 1.6rem;
     line-height: 120%;
 
-    &:hover{
+    &:hover {
       color: #636363;
-      .header__item-icon{
+
+      .header__item-icon {
         filter: grayscale(1);
       }
     }
 
-    .icon-triangle-down{
+    .icon-triangle-down {
       width: 2rem;
       height: 2rem;
       font-size: 1rem;
