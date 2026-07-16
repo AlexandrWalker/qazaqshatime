@@ -29,6 +29,13 @@
     padding: 1rem;
     transition: all 0.3s ease;
 
+    &:hover {
+      --scenes-bg-color: var(--lime-green-20);
+      --scenes-border-color: var(--lime-green);
+      --scenes-letter-color: var(--white);
+      --scenes-letter-bg-color: var(--lime-green);
+    }
+
     &.scenes-item-js--active {
       --scenes-bg-color: var(--dark-magenta-20);
       --scenes-border-color: var(--dark-magenta);

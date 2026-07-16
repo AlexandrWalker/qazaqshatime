@@ -9,6 +9,13 @@
     margin-bottom: 19.5rem;
   }
 
+  .profile-page & {
+
+    @include dosm {
+      grid-row: 1/2;
+    }
+  }
+
   .general--2 & {
 
     @include dosm {

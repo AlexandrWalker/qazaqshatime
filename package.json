@@ -40,9 +40,7 @@
     "gulp-ttf2woff2": "^1.1.2",
     "gulp-typograf": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-webp": "^4.0.1",
     "gulp-zip": "^6.0.0",
-    "imagemin-webp": "^6.1.0",
     "sass": "^1.66.1",
     "sharp": "^0.35.1"
   },

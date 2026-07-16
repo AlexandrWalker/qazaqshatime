@@ -14,12 +14,11 @@
             @@include('./blocks/general__tabs.html')
             @@include('./blocks/general__lesson.html')
             <div class="general__content">
-              @@include('./blocks/general__scenes.html')
               <div class="general__control">
-                                <div class="general__back">
+                <a class="general__back" href="javascript:history.back();">
                   <i class="icon-chevron-right-circle-inside"></i>
                   Назад
-                </div>
+                </a>
               </div>
 
               <div class="task">
@@ -50,7 +49,8 @@
                           <div class="task__describe-cover">
                             <img src="./../images/temp/describe-cover.png" alt="">
                           </div>
-                          <textarea class="task__describe-textarea" name="" rows="3" placeholder="Опишите ситуацию"></textarea>
+                          <textarea class="task__describe-textarea" name="" rows="3"
+                            placeholder="Опишите ситуацию"></textarea>
                         </div>
                       </div>
                     </div>

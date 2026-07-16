@@ -12,6 +12,14 @@
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: 10.4rem auto auto;
     }
+
+    .profile-page & {
+      grid-template-rows: auto;
+
+      @include sm {
+        display: block;
+      }
+    }
   }
 
   &__lesson {
@@ -31,7 +39,7 @@
       grid-row: 1/2;
     }
 
-    &:hover{
+    &:hover {
       background-color: #1d2d8c;
     }
 
@@ -79,6 +87,14 @@
     @include dosm {
       grid-column: 1/7;
       grid-row: 2/3;
+    }
+
+    .profile-page & {
+      margin-top: 0;
+
+      @include dosm {
+        grid-row: 1/2;
+      }
     }
   }
 
@@ -201,7 +217,7 @@
     line-height: 110%;
     color: var(--blue);
 
-    &:hover{
+    &:hover {
       color: #636363;
     }
 
@@ -368,15 +384,48 @@
       gap: 1rem;
 
       text-align: center;
+
+      &.is-active {
+
+        .general__scenes-img::before {
+          opacity: 1;
+        }
+      }
     }
 
     &-img {
       width: 10.2rem;
       height: 10.2rem;
 
+      position: relative;
+
       @include sm {
         width: 7.5rem;
         height: 7.5rem;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 10.2rem;
+        height: 10.2rem;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyIiBoZWlnaHQ9IjEwMiIgdmlld0JveD0iMCAwIDEwMiAxMDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8Y2lyY2xlIGN4PSI1MSIgY3k9IjUxIiByPSI0OSIgc3Ryb2tlPSJ1cmwoI3BhaW50MF9saW5lYXJfNjY1NV8xMjI5OCkiIHN0cm9rZS13aWR0aD0iNCIvPg0KPGRlZnM+DQo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfNjY1NV8xMjI5OCIgeDE9Ii02Ljc3OTE2IiB5MT0iOTMuODk4OSIgeDI9Ijg5LjE1MDciIHkyPSIxMS44MzAzIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+DQo8c3RvcCBzdG9wLWNvbG9yPSIjRTM2MzMzIi8+DQo8c3RvcCBvZmZzZXQ9IjAuNTgzODQ5IiBzdG9wLWNvbG9yPSIjQjczQjYyIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4MTI3NzUiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8L2RlZnM+DQo8L3N2Zz4NCg==);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        @include sm {
+          width: 7.5rem;
+          height: 7.5rem;
+        }
       }
 
       img {

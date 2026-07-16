@@ -14,12 +14,11 @@
             @@include('./blocks/general__tabs.html')
             @@include('./blocks/general__lesson.html')
             <div class="general__content">
-              @@include('./blocks/general__scenes.html')
               <div class="general__control">
-                                <div class="general__back">
+                <a class="general__back" href="javascript:history.back();">
                   <i class="icon-chevron-right-circle-inside"></i>
                   Назад
-                </div>
+                </a>
               </div>
 
               <div class="task">
@@ -71,9 +70,9 @@
                               Асан
                             </div>
                             <div class="task__chat-wrap">
-                              <div class="task__chat-btn">
+                              <button class="task__chat-btn" type="button">
                                 <i class="icon-micro"></i>
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </div>

@@ -1,0 +1,16 @@
+@use './../mixins' as *;
+
+.privacy {
+  margin-bottom: 3rem;
+
+  &__content {
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--blue);
+    }
+  }
+}

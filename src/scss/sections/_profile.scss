@@ -82,6 +82,7 @@
     &__info {
       display: grid;
       gap: 0.8rem;
+      color: var(--medium-gray);
 
       @include sm {
         text-align: center;

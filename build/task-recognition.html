@@ -278,68 +278,11 @@
   </div>
 </a>
             <div class="general__content">
-              <div class="general__scenes">
-  <div class="general__scenes-title">
-    Мини-сценки
-  </div>
-  <div class="general__scenes-wrap">
-    <div class="general__scenes-items">
-      <div class="general__scenes-item">
-        <div class="general__scenes-img">
-          <img src="./images/temp/scenes-img-1.png" alt="">
-        </div>
-        <div class="general__scenes-text">
-          Знакомство
-        </div>
-      </div>
-      <div class="general__scenes-item">
-        <div class="general__scenes-img">
-          <img src="./images/temp/scenes-img-2.png" alt="">
-        </div>
-        <div class="general__scenes-text">
-          Семья
-        </div>
-      </div>
-      <div class="general__scenes-item">
-        <div class="general__scenes-img">
-          <img src="./images/temp/scenes-img-3.png" alt="">
-        </div>
-        <div class="general__scenes-text">
-          Время
-        </div>
-      </div>
-      <div class="general__scenes-item">
-        <div class="general__scenes-img">
-          <img src="./images/temp/scenes-img-4.png" alt="">
-        </div>
-        <div class="general__scenes-text">
-          В гостях
-        </div>
-      </div>
-      <div class="general__scenes-item">
-        <div class="general__scenes-img">
-          <img src="./images/temp/scenes-img-5.png" alt="">
-        </div>
-        <div class="general__scenes-text">
-          В кафе
-        </div>
-      </div>
-      <div class="general__scenes-item">
-        <div class="general__scenes-img">
-          <img src="./images/temp/scenes-img-6.png" alt="">
-        </div>
-        <div class="general__scenes-text">
-          Магазин
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
               <div class="general__control">
-                                <div class="general__back">
+                <a class="general__back" href="javascript:history.back();">
                   <i class="icon-chevron-right-circle-inside"></i>
                   Назад
-                </div>
+                </a>
               </div>
 
               <div class="task">
@@ -371,21 +314,30 @@
                       <div class="task__block-body">
                         <div class="task__recognition">
                           <div class="task__recognition-item">
-                            <div class="task__recognition-icon">
+                            <button class="task__recognition-icon" type="button">
                               <i class="icon-play"></i>
-                            </div>
+                            </button>
                             <div class="task__recognition-block">
-                              <img src="./images/icon/audio-wave.svg" alt="">
+                              <div class="audio-wrap">
+                                <span class="audio-wave audio-wave--1"></span>
+                                <span class="audio-wave audio-wave--2"></span>
+                                <span class="audio-wave audio-wave--3"></span>
+                                <span class="audio-wave audio-wave--4"></span>
+                                <span class="audio-wave audio-wave--5"></span>
+                                <span class="audio-wave audio-wave--6"></span>
+                                <span class="audio-wave audio-wave--7"></span>
+                                <span class="audio-wave audio-wave--8"></span>
+                              </div>
                             </div>
                             <div class="task__recognition-wrap">
                               <div class="task__recognition-time">
                                 0:08
                               </div>
-                              <div class="task__recognition-speed">
+                              <button class="task__recognition-speed" type="button">
                                 <span>
                                   0.75x
                                 </span>
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -589,7 +541,6 @@
             </div>
             <div class="achievs__bar-count">
               <span>4/15</span>
-              <i class="icon-galochka"></i>
             </div>
           </div>
           <div class="achievs__bar-body">

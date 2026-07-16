@@ -918,7 +918,7 @@
 
           .task__dialogue & {
             padding-right: 4.7rem;
-            padding-left: 1rem;
+            padding-left: 2rem;
           }
         }
       }
@@ -1073,6 +1073,10 @@
 
         color: var(--white);
       }
+
+      .scenes-lesson-page & {
+        background-color: var(--dark-magenta);
+      }
     }
   }
 
@@ -1188,7 +1192,7 @@
     gap: 2rem;
     margin-bottom: -1rem;
 
-    q {
+    &-q {
       font-weight: 500;
       font-size: 2rem;
       line-height: 120%;
@@ -1649,6 +1653,7 @@
       position: relative;
 
       &--icon {
+        color: var(--bright-orange);
 
         i {
           --font-size: 3.2rem;
@@ -1926,6 +1931,13 @@
 
       &--success {
         --item-color: var(--lime-green);
+
+        .task__done-item--icon i {
+
+          &::before {
+            content: "\e90a";
+          }
+        }
       }
 
       &--fail {
