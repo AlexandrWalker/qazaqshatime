@@ -96,6 +96,28 @@
   display: grid;
   gap: 2rem;
 
+  &-page {
+
+    .general__inner {
+      grid-template-rows: auto;
+    }
+
+    .general__content {
+      margin-top: 0;
+
+      @include dosm {
+        grid-row: 1/2;
+      }
+    }
+
+    .sidebar {
+
+      @include dosm {
+        grid-row: 1/2;
+      }
+    }
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;

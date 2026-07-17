@@ -430,7 +430,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     blocks.forEach(block => observer.observe(block));
-    
+
+  })();
+
+  (function () {
+    const items = document.querySelectorAll('.vocabulary-save__item');
+
+    items.forEach(item => {
+      item.addEventListener('click', (event) => {
+        if (event.target.closest('button')) {
+          event.stopPropagation();
+          return;
+        }
+
+        const isActive = item.classList.contains('is-active');
+
+        // items.forEach(el => el.classList.remove('is-active'));
+
+        if (!isActive) {
+          item.classList.add('is-active');
+        } else {
+          item.classList.remove('is-active');
+        }
+      });
+    });
   })();
 
   /**

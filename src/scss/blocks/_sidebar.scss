@@ -163,11 +163,10 @@
 
       .btn {
         --btn-color: var(--black);
+        --btn-border-color: var(--medium-gray);
 
         width: auto;
         padding: 2.1rem 1.1rem 2rem;
-
-        border: 0.2rem solid #636463;
 
         font-weight: 700;
         font-size: 1.4rem;
@@ -179,8 +178,8 @@
         flex-grow: 1;
 
         &._active {
-          border-color: #b4d335;
-          background: rgba(180, 211, 53, 0.2);
+          --btn-border-color: #b4d335;
+          --btn-background: rgba(180, 211, 53, 0.2);
         }
       }
     }

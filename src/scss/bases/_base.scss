@@ -59,6 +59,7 @@ body {
 
 .main {
   flex: 1 0 auto;
+  position: relative;
 
   @include dosm {
     padding-top: 4rem;
