@@ -8585,6 +8585,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
+  display: none;
 }
 
 .task__control-text {
